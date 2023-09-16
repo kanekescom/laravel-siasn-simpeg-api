@@ -1,2 +1,2 @@
-# laravel-siasn-simpeg-api
-SIASN SIASNAPI-SIMPEG REST API Client for Laravel
+# Laravel SIASN-SIMPEG API
+This library is the abstraction of SIASN-SIMPEG API for access from applications written with Laravel PHP Framework.
