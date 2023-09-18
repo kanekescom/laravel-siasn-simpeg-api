@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Api\Simpeg\Tests;
 
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
-class GetReferensiUnorTest extends TestCase
+class GetListPengadaanTest extends TestCase
 {
     /** @test */
     public function can_get_ref_unor()
