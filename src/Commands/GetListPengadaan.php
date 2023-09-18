@@ -20,7 +20,7 @@ class GetListPengadaan extends Command
      *
      * @var string
      */
-    protected $description = 'Consume list pengadaan on SIASN SIMPEG API endpoint';
+    protected $description = 'Consume /pengadaan/list-pengadaan-instansi endpoint on SIASN SIMPEG API';
 
     /**
      * Execute the console command.

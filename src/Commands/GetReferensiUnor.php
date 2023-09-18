@@ -19,7 +19,7 @@ class GetReferensiUnor extends Command
      *
      * @var string
      */
-    protected $description = 'Consume referensi unor on SIASN SIMPEG API endpoint';
+    protected $description = 'Consume /referensi/ref-unor endpoint on SIASN SIMPEG API';
 
     /**
      * Execute the console command.
