@@ -13,12 +13,4 @@ class GetReferensiUnorTest extends TestCase
 
         $this->assertTrue($response->successful());
     }
-
-    /** @test */
-    public function can_get_pengadaan_list_instansi()
-    {
-        $response = Simpeg::getListPengadaan(now()->year);
-
-        $this->assertTrue($response->successful());
-    }
 }

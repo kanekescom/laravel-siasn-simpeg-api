@@ -11,8 +11,19 @@ class CommandTest extends TestCase
     }
 
     /** @test */
-    public function can_get_pengadaan_list_instansi()
+    public function can_get_list_pengadaan()
     {
-        $this->artisan('siasn-simpeg:get-list-pengadaan '.(now()->year))->assertSuccessful();
+        $tahun = now()->year;
+
+        $this->artisan("siasn-simpeg:get-list-pengadaan {$tahun}")->assertSuccessful();
+    }
+
+    /** @test */
+    public function can_get_list_pensiun()
+    {
+        $tglAwal = now()->format('01-01-'.now()->year);
+        $tglAkhir = now()->format('d-m-Y');
+
+        $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir}")->assertSuccessful();
     }
 }

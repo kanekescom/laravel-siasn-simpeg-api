@@ -62,6 +62,7 @@ class SimpegServiceProvider extends ServiceProvider
 
         $this->commands([
             Commands\GetListPengadaan::class,
+            Commands\GetListPensiun::class,
             Commands\GetReferensiUnor::class,
         ]);
     }
