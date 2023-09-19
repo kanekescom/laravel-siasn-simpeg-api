@@ -48,6 +48,9 @@
             "aliases": {
                 "Simpeg": "Kanekescom\\Siasn\\Api\\Simpeg\\Facades\\Simpeg"
             }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
         }
     },
     "scripts": {

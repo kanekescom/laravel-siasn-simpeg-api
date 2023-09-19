@@ -64,6 +64,7 @@ class SimpegServiceProvider extends ServiceProvider
             Commands\GetListPengadaan::class,
             Commands\GetListPensiun::class,
             Commands\GetReferensiUnor::class,
+            Commands\GetRiwayatJabatan::class,
         ]);
     }
 

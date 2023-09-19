@@ -26,4 +26,12 @@ class CommandTest extends TestCase
 
         $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir}")->assertSuccessful();
     }
+
+    /** @test */
+    public function can_get_riwayat_jabatan()
+    {
+        $nipBaru = env('PEGAWAI_NIP_BARU');
+
+        $this->artisan("siasn-simpeg:get-rw-jabatan {$nipBaru}")->assertSuccessful();
+    }
 }
