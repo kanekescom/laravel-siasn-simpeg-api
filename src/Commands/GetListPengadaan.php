@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Api\Simpeg\Models\ListPengadaan;
 
 class GetListPengadaan extends Command
 {
@@ -13,7 +14,8 @@ class GetListPengadaan extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-list-pengadaan
-                            {tahun : tahun}';
+                            {tahun : tahun}
+                            {--model : Output from model}';
 
     /**
      * The console command description.
@@ -27,6 +29,12 @@ class GetListPengadaan extends Command
      */
     public function handle()
     {
-        $this->info(json_encode(Simpeg::getListPengadaan($this->argument('tahun'))->object(), JSON_PRETTY_PRINT));
+        if ($this->option('model')) {
+            $data = (new ListPengadaan($this->argument('tahun')))->all();
+        } else {
+            $data = Simpeg::getListPengadaan($this->argument('tahun'))->object();
+        }
+
+        $this->info(json_encode($data, JSON_PRETTY_PRINT));
     }
 }

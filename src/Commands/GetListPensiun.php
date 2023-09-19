@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Api\Simpeg\Models\ListPensiun;
 
 class GetListPensiun extends Command
 {
@@ -14,7 +15,8 @@ class GetListPensiun extends Command
      */
     protected $signature = 'siasn-simpeg:get-list-pensiun
                             {tglAwal : tanggal awal}
-                            {tglAkhir? : tanggal akhir}';
+                            {tglAkhir? : tanggal akhir}
+                            {--model : Output from model}';
 
     /**
      * The console command description.
@@ -28,6 +30,12 @@ class GetListPensiun extends Command
      */
     public function handle()
     {
-        $this->info(json_encode(Simpeg::getListPensiun($this->argument('tglAwal'), $this->argument('tglAkhir'))->object(), JSON_PRETTY_PRINT));
+        if ($this->option('model')) {
+            $data = (new ListPensiun($this->argument('tglAwal'), $this->argument('tglAkhir')))->all();
+        } else {
+            $data = Simpeg::getListPensiun($this->argument('tglAwal'), $this->argument('tglAkhir'))->object();
+        }
+
+        $this->info(json_encode($data, JSON_PRETTY_PRINT));
     }
 }
