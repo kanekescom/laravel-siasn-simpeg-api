@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This library is the abstraction of SIASN Simpeg API for access from applications written with Laravel PHP Framework.
+This library is the abstraction of SIASN SIMPEG API for access from applications written with Laravel PHP Framework.
 
 ## Installation
 
