@@ -1,6 +1,6 @@
 {
     "name": "kanekescom/laravel-siasn-simpeg-api",
-    "description": "Library to consume the SIASN Simpeg BKN API",
+    "description": "Library to consume the SIASN SIMPEG BKN API",
     "type": "library",
     "license": "MIT",
     "authors": [
