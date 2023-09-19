@@ -17,6 +17,12 @@ $ composer require kanekescom/laravel-siasn-simpeg-api
 
 The package will automatically register itself.
 
+You can publish the config file with:
+
+``` bash
+$ php artisan vendor:publish --provider="Kanekescom\Siasn\Api\Simpeg\SimpegServiceProvider" --tag="config"
+```
+
 ## Usage
 
 ## Change log
