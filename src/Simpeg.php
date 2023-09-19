@@ -6,6 +6,7 @@ use Kanekescom\Siasn\Api\Facades\Siasn;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPengadaanEndpoint;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPensiunEndpoint;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasReferensiEndpoint;
+use Kanekescom\Siasn\Api\Simpeg\Traits\HasRiwayatEndpoint;
 
 class Simpeg
 {
@@ -14,6 +15,7 @@ class Simpeg
     use HasListPengadaanEndpoint;
     use HasListPensiunEndpoint;
     use HasReferensiEndpoint;
+    use HasRiwayatEndpoint;
 
     /**
      * Create a new instance.
