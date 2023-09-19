@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Api\Simpeg\Models\ReferensiUnor;
 
 class GetReferensiUnor extends Command
 {
@@ -12,7 +13,8 @@ class GetReferensiUnor extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-simpeg:get-ref-unor';
+    protected $signature = 'siasn-simpeg:get-ref-unor
+                            {--model : Output from model}';
 
     /**
      * The console command description.
@@ -26,6 +28,12 @@ class GetReferensiUnor extends Command
      */
     public function handle()
     {
-        $this->info(json_encode(Simpeg::getRefUnor()->object(), JSON_PRETTY_PRINT));
+        if ($this->option('model')) {
+            $data = (new ReferensiUnor)->all();
+        } else {
+            $data = Simpeg::getRefUnor()->object();
+        }
+
+        $this->info(json_encode($data, JSON_PRETTY_PRINT));
     }
 }
