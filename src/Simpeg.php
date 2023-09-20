@@ -3,6 +3,7 @@
 namespace Kanekescom\Siasn\Api\Simpeg;
 
 use Kanekescom\Siasn\Api\Facades\Siasn;
+use Kanekescom\Siasn\Api\Simpeg\Traits\HasDataEndpoint;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPengadaanEndpoint;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPensiunEndpoint;
 use Kanekescom\Siasn\Api\Simpeg\Traits\HasReferensiEndpoint;
@@ -12,6 +13,7 @@ class Simpeg
 {
     private $response;
 
+    use HasDataEndpoint;
     use HasListPengadaanEndpoint;
     use HasListPensiunEndpoint;
     use HasReferensiEndpoint;

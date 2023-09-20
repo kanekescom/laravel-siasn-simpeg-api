@@ -11,7 +11,7 @@ class ListPengadaanTransformer extends TransformerAbstract
      *
      * @param  Kanekescom\Siasn\Simpeg\Models\ListPengadaan  $model
      */
-    public function transform($item): array
+    public function transform(array $item): array
     {
         return [
             'id' => $item['id'],

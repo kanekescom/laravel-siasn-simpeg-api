@@ -11,7 +11,7 @@ class ReferensiUnorTransformer extends TransformerAbstract
      *
      * @param  Kanekescom\Siasn\Simpeg\Models\ReferensiUnor  $model
      */
-    public function transform($item): array
+    public function transform(array $item): array
     {
         return [
             'id' => $item['Id'],

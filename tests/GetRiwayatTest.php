@@ -5,7 +5,7 @@ namespace Kanekescom\Siasn\Api\Simpeg\Tests;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 use Kanekescom\Siasn\Api\Simpeg\Models\RiwayatJabatan;
 
-class GetRiwayatJabatanTest extends TestCase
+class GetRiwayatTest extends TestCase
 {
     /** @test */
     public function can_get_riwayat_jabatan()
