@@ -9,7 +9,7 @@ class ListPensiunTransformer extends TransformerAbstract
     /**
      * Transform the ListPensiun model.
      *
-     * @param  Kanekescom\Siasn\Simpeg\Models\ListPensiun  $model
+     * @param  Kanekescom\Siasn\Simpeg\Models\ListPensiun  $item
      */
     public function transform(array $item): array
     {

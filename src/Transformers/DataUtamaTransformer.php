@@ -9,7 +9,7 @@ class DataUtamaTransformer extends TransformerAbstract
     /**
      * Transform the DataUtama model.
      *
-     * @param  Kanekescom\Siasn\Simpeg\Models\DataUtama  $model
+     * @param  Kanekescom\Siasn\Simpeg\Models\DataUtama  $item
      */
     public function transform(array $item): array
     {

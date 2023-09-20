@@ -9,7 +9,7 @@ class ListPengadaanTransformer extends TransformerAbstract
     /**
      * Transform the ListPengadaan model.
      *
-     * @param  Kanekescom\Siasn\Simpeg\Models\ListPengadaan  $model
+     * @param  Kanekescom\Siasn\Simpeg\Models\ListPengadaan  $item
      */
     public function transform(array $item): array
     {

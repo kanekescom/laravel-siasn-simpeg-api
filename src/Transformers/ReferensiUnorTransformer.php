@@ -9,7 +9,7 @@ class ReferensiUnorTransformer extends TransformerAbstract
     /**
      * Transform the ReferensiUnor model.
      *
-     * @param  Kanekescom\Siasn\Simpeg\Models\ReferensiUnor  $model
+     * @param  Kanekescom\Siasn\Simpeg\Models\ReferensiUnor  $item
      */
     public function transform(array $item): array
     {
