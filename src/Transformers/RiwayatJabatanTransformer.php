@@ -39,7 +39,7 @@ class RiwayatJabatanTransformer extends TransformerAbstract
             'nama_unor' => $item['namaUnor'],
             'nama_jabatan' => $item['namaJabatan'],
             'tmt_pelantikan' => $item['tmtPelantikan'],
-            'path' => $item['path'],
+            'path' => collect($item['path']),
         ];
     }
 }
