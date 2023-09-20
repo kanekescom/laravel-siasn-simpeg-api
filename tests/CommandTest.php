@@ -35,7 +35,7 @@ class CommandTest extends TestCase
     /** @test */
     public function can_get_list_pensiun()
     {
-        $tglAwal = now()->format('01-01-'.now()->year);
+        $tglAwal = now()->format('01-01-' . now()->year);
         $tglAkhir = now()->format('d-m-Y');
 
         $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir}")->assertSuccessful();
@@ -44,10 +44,26 @@ class CommandTest extends TestCase
     /** @test */
     public function can_get_list_pensiun_as_model()
     {
-        $tglAwal = now()->format('01-01-'.now()->year);
+        $tglAwal = now()->format('01-01-' . now()->year);
         $tglAkhir = now()->format('d-m-Y');
 
         $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir} --model")->assertSuccessful();
+    }
+
+    /** @test */
+    public function can_get_data_utama()
+    {
+        $nipBaru = env('PEGAWAI_NIP_BARU');
+
+        $this->artisan("siasn-simpeg:get-data-utama {$nipBaru}")->assertSuccessful();
+    }
+
+    /** @test */
+    public function can_get_data_utama_as_model()
+    {
+        $nipBaru = env('PEGAWAI_NIP_BARU');
+
+        $this->artisan("siasn-simpeg:get-data-utama {$nipBaru} --model")->assertSuccessful();
     }
 
     /** @test */
