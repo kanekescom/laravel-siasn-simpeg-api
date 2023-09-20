@@ -35,7 +35,7 @@ class CommandTest extends TestCase
     /** @test */
     public function can_get_list_pensiun()
     {
-        $tglAwal = now()->format('01-01-' . now()->year);
+        $tglAwal = now()->format('01-01-'.now()->year);
         $tglAkhir = now()->format('d-m-Y');
 
         $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir}")->assertSuccessful();
@@ -44,7 +44,7 @@ class CommandTest extends TestCase
     /** @test */
     public function can_get_list_pensiun_as_model()
     {
-        $tglAwal = now()->format('01-01-' . now()->year);
+        $tglAwal = now()->format('01-01-'.now()->year);
         $tglAkhir = now()->format('d-m-Y');
 
         $this->artisan("siasn-simpeg:get-list-pensiun {$tglAwal} {$tglAkhir} --model")->assertSuccessful();

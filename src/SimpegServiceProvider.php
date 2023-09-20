@@ -24,7 +24,7 @@ class SimpegServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/siasn_simpeg.php', 'siasn_simpeg');
+        $this->mergeConfigFrom(__DIR__.'/../config/siasn_simpeg.php', 'siasn_simpeg');
 
         // Register the service the package provides.
         $this->app->singleton(Simpeg::class, function ($app) {
@@ -37,17 +37,17 @@ class SimpegServiceProvider extends ServiceProvider
      */
     protected function offerPublishing(): void
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return;
         }
 
-        if (!function_exists('config_path')) {
+        if (! function_exists('config_path')) {
             // function not available and 'publish' not relevant in Lumen
             return;
         }
 
         $this->publishes([
-            __DIR__ . '/../config/siasn_simpeg.php' => config_path('siasn_simpeg.php'),
+            __DIR__.'/../config/siasn_simpeg.php' => config_path('siasn_simpeg.php'),
         ], 'config');
     }
 
@@ -56,7 +56,7 @@ class SimpegServiceProvider extends ServiceProvider
      */
     protected function registerCommands(): void
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return;
         }
 
@@ -74,7 +74,7 @@ class SimpegServiceProvider extends ServiceProvider
      */
     protected function registerHttpMacroHelpers(): void
     {
-        if (!method_exists(Http::class, 'macro')) { // Lumen
+        if (! method_exists(Http::class, 'macro')) { // Lumen
             return;
         }
 
