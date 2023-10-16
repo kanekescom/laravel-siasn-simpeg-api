@@ -24,7 +24,7 @@ class Simpeg
      */
     public function __construct()
     {
-        $this->response = Siasn::baseUrl(config('siasn_simpeg.base_url'));
+        $this->response = Siasn::baseUrl(config('siasn_simpeg_api.base_url'));
     }
 
     /**

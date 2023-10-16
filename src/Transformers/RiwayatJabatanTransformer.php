@@ -2,6 +2,7 @@
 
 namespace Kanekescom\Siasn\Api\Simpeg\Transformers;
 
+use Carbon\Carbon;
 use League\Fractal\TransformerAbstract;
 
 class RiwayatJabatanTransformer extends TransformerAbstract
