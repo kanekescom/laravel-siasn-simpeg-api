@@ -2,58 +2,30 @@
 
 namespace Kanekescom\Siasn\Api\Simpeg;
 
+use Kanekescom\Helperia\Support\ClassExtender;
 use Kanekescom\Siasn\Api\Facades\Siasn;
-use Kanekescom\Siasn\Api\Simpeg\Traits\HasDataEndpoint;
-use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPengadaanEndpoint;
-use Kanekescom\Siasn\Api\Simpeg\Traits\HasListPensiunEndpoint;
-use Kanekescom\Siasn\Api\Simpeg\Traits\HasReferensiEndpoint;
-use Kanekescom\Siasn\Api\Simpeg\Traits\HasRiwayatEndpoint;
 
-class Simpeg
+class Simpeg extends ClassExtender
 {
-    private $response;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasAngkaKreditEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasCpnsEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasDataPegawaiEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasDiklatEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasDokEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasHukdisEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasJabatanEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasKpEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasKursusEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasPemberhentianEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasPengadaanEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasPenghargaanEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasReferensiEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasRiwayatEndpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasSkp22Endpoint;
+    use \Kanekescom\Siasn\Api\Simpeg\Traits\HasSkpEndpoint;
 
-    use HasDataEndpoint;
-    use HasListPengadaanEndpoint;
-    use HasListPensiunEndpoint;
-    use HasReferensiEndpoint;
-    use HasRiwayatEndpoint;
-
-    /**
-     * Create a new instance.
-     */
     public function __construct()
     {
-        $this->response = Siasn::baseUrl(config('siasn_simpeg_api.base_url'));
-    }
-
-    /**
-     * Handle dynamic method calls.
-     *
-     * @param  string  $method
-     * @param  array  $parameters
-     */
-    public function __call($method, $parameters)
-    {
-        if (method_exists($this->response, $method)) {
-            return call_user_func_array([$this->response, $method], $parameters);
-        }
-
-        throw new \BadMethodCallException("Method {$method} does not exist.");
-    }
-
-    /**
-     * Handle dynamic static method calls.
-     *
-     * @param  string  $method
-     * @param  array  $parameters
-     */
-    public static function __callStatic($method, $parameters)
-    {
-        if (method_exists((new static)->response, $method)) {
-            return call_user_func_array([(new static)->response, $method], $parameters);
-        }
-
-        throw new \BadMethodCallException("Method {$method} does not exist.");
+        $this->class = Siasn::baseUrl(config('siasn-simpeg-api.base_url'));
     }
 }

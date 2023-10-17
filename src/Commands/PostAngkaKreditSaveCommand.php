@@ -1,0 +1,40 @@
+<?php
+
+namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+
+use Illuminate\Console\Command;
+use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+
+class PostAngkaKreditSaveCommand extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'siasn-simpeg:post-angka-kredit-save';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Send POST request to /angkakredit/save endpoint';
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
+    {
+        $this->comment('{"bulanMulaiPenailan":"string","bulanSelesaiPenailan":"string","id":"string","isAngkaKreditPertama":"string","isIntegrasi":"string","isKonversi":"string","kreditBaruTotal":"string","kreditPenunjangBaru":"string","kreditUtamaBaru":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","rwJabatanId":"string","tahunMulaiPenailan":"string","tahunSelesaiPenailan":"string","tanggalSk":"string"}');
+
+        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+
+        $this->info(json_encode(
+            Simpeg::postAngkaKreditSave([], $queries)->object(),
+            JSON_PRETTY_PRINT
+        ));
+
+        return self::SUCCESS;
+    }
+}

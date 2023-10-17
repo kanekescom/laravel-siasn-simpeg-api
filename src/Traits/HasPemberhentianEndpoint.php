@@ -5,11 +5,11 @@ namespace Kanekescom\Siasn\Api\Simpeg\Traits;
 use Illuminate\Http\Client\Response;
 use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
-trait HasReferensiEndpoint
+trait HasPemberhentianEndpoint
 {
-    public function getReferensiUnor(array $paths = [], array $queries = []): Response
+    public function getListPensiunInstansi(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/referensi/ref-unor";
+        $urlFormat = "/pns/list-pensiun-instansi";
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

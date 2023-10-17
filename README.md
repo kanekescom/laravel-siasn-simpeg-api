@@ -1,65 +1,72 @@
 # Laravel SIASN SIMPEG API
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/kanekescom/laravel-siasn-simpeg-api.svg?style=flat-square)](https://packagist.org/packages/kanekescom/laravel-siasn-simpeg-api)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/kanekescom/laravel-siasn-simpeg-api/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/kanekescom/laravel-siasn-simpeg-api/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/kanekescom/laravel-siasn-simpeg-api/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/kanekescom/laravel-siasn-simpeg-api/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-simpeg-api.svg?style=flat-square)](https://packagist.org/packages/kanekescom/laravel-siasn-simpeg-api)
 
 This library is the abstraction of SIASN SIMPEG API for access from applications written with Laravel PHP Framework.
+
+## Support us
+
+Want to provide tangible support? Use the following platform to contribute to open-source software developers. Every contribution you make is a significant boost to continue building and enhancing technology that benefits everyone.
+
+- Buy Me a Coffee https://s.id/hadibmac
+- Patreon https://s.id/hadipatreon
+- Saweria https://s.id/hadisaweria
+
+We highly appreciate you sending us a few cups of coffee to accompany us while writing code. Super thanks.
 
 ## Installation
 
 You can install the package via composer:
 
-``` bash
-$ composer require kanekescom/laravel-siasn-simpeg-api
+```bash
+composer require kanekescom/laravel-siasn-simpeg-api
 ```
 
-The package will automatically register itself.
+You can publish and run the migrations with:
+
+```bash
+php artisan vendor:publish --tag="laravel-siasn-simpeg-api-migrations"
+php artisan migrate
+```
 
 You can publish the config file with:
 
-``` bash
-$ php artisan vendor:publish --provider="Kanekescom\Siasn\Api\Simpeg\SimpegServiceProvider" --tag="config"
+```bash
+php artisan vendor:publish --tag="laravel-siasn-simpeg-api-config"
 ```
+
+This is the contents of the published config file.
 
 ## Usage
 
-## Change log
-
-Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+Coming Soon
 
 ## Testing
 
-``` bash
-$ composer test
+```bash
+composer test
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details and a todolist.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
+## Security Vulnerabilities
 
-If you discover any security related issues, please email imachmadhadikurnia@gmail.com instead of using the issue tracker.
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
-- [Achmad Hadi Kurnia][link-author]
-- [All Contributors][link-contributors]
+- [Achmad Hadi Kurnia](https://github.com/kanekescom)
+- [All Contributors](../../contributors)
 
 ## License
 
-MIT. Please see the [license file](LICENSE) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/kanekescom/laravel-siasn-simpeg-api.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-simpeg-api.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/kanekescom/laravel-siasn-simpeg-api/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
-
-[link-packagist]: https://packagist.org/packages/kanekescom/laravel-siasn-simpeg-api
-[link-downloads]: https://packagist.org/packages/kanekescom/laravel-siasn-simpeg-api
-[link-travis]: https://travis-ci.org/kanekescom/laravel-siasn-simpeg-api
-[link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/kanekescom
-[link-contributors]: ../../contributors
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
