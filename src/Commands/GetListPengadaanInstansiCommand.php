@@ -13,8 +13,7 @@ class GetListPengadaanInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-list-pengadaan-instansi
-                            {tahun : Tahun}
-                            {--model : Output from model}';
+                            {tahun : Tahun}';
 
     /**
      * The console command description.

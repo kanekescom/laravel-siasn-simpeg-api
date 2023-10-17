@@ -13,8 +13,7 @@ class GetRwJabatanCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-jabatan
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

@@ -13,8 +13,7 @@ class GetJabatanIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-jabatan-id
-                            {id : idRiwayatJabatan}
-                            {--model : Output from model}';
+                            {id : idRiwayatJabatan}';
 
     /**
      * The console command description.

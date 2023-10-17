@@ -13,8 +13,7 @@ class GetKursusIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-kursus-id
-                            {id : idRiwayatKursus}
-                            {--model : Output from model}';
+                            {id : idRiwayatKursus}';
 
     /**
      * The console command description.

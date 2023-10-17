@@ -12,8 +12,7 @@ class GetReferensiUnorCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'siasn-simpeg:get-referensi-unor
-                            {--model : Output from model}';
+    protected $signature = 'siasn-simpeg:get-referensi-unor';
 
     /**
      * The console command description.

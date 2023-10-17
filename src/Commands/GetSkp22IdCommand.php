@@ -13,8 +13,7 @@ class GetSkp22IdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-skp22-id
-                            {id : idRiwayatSkp}
-                            {--model : Output from model}';
+                            {id : idRiwayatSkp}';
 
     /**
      * The console command description.

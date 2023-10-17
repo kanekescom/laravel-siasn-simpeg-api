@@ -13,8 +13,7 @@ class GetJabatanPnsCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-jabatan-pns
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

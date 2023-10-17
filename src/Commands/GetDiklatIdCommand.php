@@ -13,8 +13,7 @@ class GetDiklatIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-diklat-id
-                            {id : idRiwayatDiklat}
-                            {--model : Output from model}';
+                            {id : idRiwayatDiklat}';
 
     /**
      * The console command description.

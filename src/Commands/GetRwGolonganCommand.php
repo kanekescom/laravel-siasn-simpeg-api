@@ -13,8 +13,7 @@ class GetRwGolonganCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-golongan
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

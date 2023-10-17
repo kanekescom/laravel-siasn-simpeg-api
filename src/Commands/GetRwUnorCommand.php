@@ -13,8 +13,7 @@ class GetRwUnorCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-unor
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

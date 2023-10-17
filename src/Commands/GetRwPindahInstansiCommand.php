@@ -13,8 +13,7 @@ class GetRwPindahInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-pindah-instansi
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

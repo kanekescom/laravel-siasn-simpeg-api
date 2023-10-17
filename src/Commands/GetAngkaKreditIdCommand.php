@@ -13,8 +13,7 @@ class GetAngkaKreditIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-angka-kredit-id
-                            {id : idRiwayatAngkaKredit}
-                            {--model : Output from model}';
+                            {id : idRiwayatAngkaKredit}';
 
     /**
      * The console command description.

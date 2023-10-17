@@ -13,8 +13,7 @@ class GetListKpInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-list-kp-instansi
-                            {periode : Periode}
-                            {--model : Output from model}';
+                            {periode : Periode}';
 
     /**
      * The console command description.

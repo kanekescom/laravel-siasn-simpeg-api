@@ -13,8 +13,7 @@ class GetHukdisIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-hukdis-id
-                            {id : idRiwayatHukdis}
-                            {--model : Output from model}';
+                            {id : idRiwayatHukdis}';
 
     /**
      * The console command description.

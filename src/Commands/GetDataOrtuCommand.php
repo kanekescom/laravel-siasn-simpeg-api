@@ -13,8 +13,7 @@ class GetDataOrtuCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-data-ortu
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

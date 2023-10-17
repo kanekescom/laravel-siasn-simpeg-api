@@ -13,8 +13,7 @@ class GetDataPasanganCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-data-pasangan
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

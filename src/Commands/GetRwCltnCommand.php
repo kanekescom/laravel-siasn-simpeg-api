@@ -13,8 +13,7 @@ class GetRwCltnCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-cltn
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

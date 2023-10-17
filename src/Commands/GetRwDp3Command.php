@@ -13,8 +13,7 @@ class GetRwDp3Command extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-dp3
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.

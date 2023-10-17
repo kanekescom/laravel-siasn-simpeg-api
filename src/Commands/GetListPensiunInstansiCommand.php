@@ -14,8 +14,7 @@ class GetListPensiunInstansiCommand extends Command
      */
     protected $signature = 'siasn-simpeg:get-list-pensiun-instansi
                             {tglAwal : Tanggal awal}
-                            {tglAkhir : Tanggal akhir}
-                            {--model : Output from model}';
+                            {tglAkhir : Tanggal akhir}';
 
     /**
      * The console command description.

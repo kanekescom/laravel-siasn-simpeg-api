@@ -13,8 +13,7 @@ class GetPenghargaanIdCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-penghargaan-id
-                            {id : idRiwayatPenghargaan}
-                            {--model : Output from model}';
+                            {id : idRiwayatPenghargaan}';
 
     /**
      * The console command description.

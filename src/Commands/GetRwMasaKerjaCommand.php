@@ -13,8 +13,7 @@ class GetRwMasaKerjaCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-rw-masa-kerja
-                            {nipBaru : NIP Baru}
-                            {--model : Output from model}';
+                            {nipBaru : NIP Baru}';
 
     /**
      * The console command description.
