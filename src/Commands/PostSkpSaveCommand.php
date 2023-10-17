@@ -28,10 +28,10 @@ class PostSkpSaveCommand extends Command
     {
         $this->comment('{"atasanPejabatPenilai":"string","atasanPenilaiGolongan":"string","atasanPenilaiJabatan":"string","atasanPenilaiNama":"string","atasanPenilaiNipNrp":"string","atasanPenilaiTmtGolongan":"string","atasanPenilaiUnorNama":"string","disiplin":0,"id":"string","integritas":0,"jenisJabatan":"string","jumlah":0,"kepemimpinan":0,"kerjasama":0,"komitmen":0,"nilaiPerilakuKerja":0,"nilaiPrestasiKerja":0,"nilaiSkp":0,"nilairatarata":0,"orientasiPelayanan":0,"pejabatPenilai":"string","penilaiGolongan":"string","penilaiJabatan":"string","penilaiNama":"string","penilaiNipNrp":"string","penilaiTmtGolongan":"string","penilaiUnorNama":"string","pnsDinilaiOrang":"string","pnsUserId":"string","statusAtasanPenilai":"string","statusPenilai":"string","tahun":0}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::postSkpSave([], $queries)->object(),
+            Simpeg::postSkpSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

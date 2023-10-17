@@ -28,12 +28,12 @@ class GetListPengadaanInstansiCommand extends Command
     public function handle()
     {
         $tahun = $this->argument('tahun');
-        $queries = [
+        $query = [
             'tahun' => $tahun,
         ];
 
         $this->info(json_encode(
-            Simpeg::getListPengadaanInstansi([], $queries)->object(),
+            Simpeg::getListPengadaanInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

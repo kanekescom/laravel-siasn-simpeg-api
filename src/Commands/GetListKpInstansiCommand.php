@@ -28,12 +28,12 @@ class GetListKpInstansiCommand extends Command
     public function handle()
     {
         $periode = $this->argument('periode');
-        $queries = [
+        $query = [
             'periode' => $periode,
         ];
 
         $this->info(json_encode(
-            Simpeg::getListKpInstansi([], $queries)->object(),
+            Simpeg::getListKpInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -28,10 +28,10 @@ class GetDownloadDokCommand extends Command
     {
         $this->comment('{"filePath":"string"}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::getDownloadDok([], $queries)->object(),
+            Simpeg::getDownloadDok([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

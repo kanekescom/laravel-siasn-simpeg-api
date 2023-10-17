@@ -28,10 +28,10 @@ class PostDiklatSaveCommand extends Command
     {
         $this->comment('{"bobot":0,"id":"string","institusiPenyelenggara":"string","jenisKompetensi":"string","jumlahJam":0,"latihanStrukturalId":"string","nomor":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","tahun":0,"tanggal":"string","tanggalSelesai":"string"}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::postDiklatSave([], $queries)->object(),
+            Simpeg::postDiklatSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

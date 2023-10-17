@@ -28,10 +28,10 @@ class PostAngkaKreditSaveCommand extends Command
     {
         $this->comment('{"bulanMulaiPenailan":"string","bulanSelesaiPenailan":"string","id":"string","isAngkaKreditPertama":"string","isIntegrasi":"string","isKonversi":"string","kreditBaruTotal":"string","kreditPenunjangBaru":"string","kreditUtamaBaru":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","rwJabatanId":"string","tahunMulaiPenailan":"string","tahunSelesaiPenailan":"string","tanggalSk":"string"}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::postAngkaKreditSave([], $queries)->object(),
+            Simpeg::postAngkaKreditSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

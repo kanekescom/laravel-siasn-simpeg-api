@@ -28,10 +28,10 @@ class PostHukdisSaveCommand extends Command
     {
         $this->comment('{"akhirHukumanTanggal":"string","alasanHukumanDisiplinId":"string","golonganId":"string","golonganLama":"string","hukdisYangDiberhentikanId":"string","hukumanTanggal":"string","id":"string","jenisHukumanId":"string","jenisTingkatHukumanId":"string","kedudukanHukumId":"string","keterangan":"string","masaBulan":"string","masaTahun":"string","nomorPp":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","skNomor":"string","skPembatalanNomor":"string","skPembatalanTanggal":"string","skTanggal":"string"}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::postHukdisSave([], $queries)->object(),
+            Simpeg::postHukdisSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

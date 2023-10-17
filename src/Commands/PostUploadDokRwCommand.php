@@ -28,10 +28,10 @@ class PostUploadDokRwCommand extends Command
     {
         $this->comment('{"id_riwayat":"string","id_ref_dokumen":0,"file":"string"}');
 
-        $queries = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
         $this->info(json_encode(
-            Simpeg::postUploadDokRw([], $queries)->object(),
+            Simpeg::postUploadDokRw([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

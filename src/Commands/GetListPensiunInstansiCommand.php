@@ -30,13 +30,13 @@ class GetListPensiunInstansiCommand extends Command
     {
         $tglAwal = $this->argument('tglAwal');
         $tglAkhir = $this->argument('tglAkhir');
-        $queries = [
+        $query = [
             'tglAwal' => $tglAwal,
             'tglAkhir' => $tglAkhir,
         ];
 
         $this->info(json_encode(
-            Simpeg::getListPensiunInstansi([], $queries)->object(),
+            Simpeg::getListPensiunInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 
