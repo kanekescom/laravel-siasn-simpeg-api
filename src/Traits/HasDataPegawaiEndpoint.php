@@ -9,7 +9,7 @@ trait HasDataPegawaiEndpoint
 {
     public function getDataAnak(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/pns/data-anak/{nipBaru}";
+        $urlFormat = '/pns/data-anak/{nipBaru}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasDataPegawaiEndpoint
 
     public function getDataOrtu(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/pns/data-ortu/{nipBaru}";
+        $urlFormat = '/pns/data-ortu/{nipBaru}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -25,7 +25,7 @@ trait HasDataPegawaiEndpoint
 
     public function getDataPasangan(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/pns/data-pasangan/{nipBaru}";
+        $urlFormat = '/pns/data-pasangan/{nipBaru}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -33,7 +33,7 @@ trait HasDataPegawaiEndpoint
 
     public function postDataUtamaUpdate(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/pns/data-utama-update";
+        $urlFormat = '/pns/data-utama-update';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -41,7 +41,7 @@ trait HasDataPegawaiEndpoint
 
     public function getDataUtama(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/pns/data-utama/{nipBaru}";
+        $urlFormat = '/pns/data-utama/{nipBaru}';
         $url = (new UrlParser($urlFormat))->parse($paths);
         $url = (new UrlParser($urlFormat))->parse($paths);
 

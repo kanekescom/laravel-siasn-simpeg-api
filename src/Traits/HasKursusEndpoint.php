@@ -9,7 +9,7 @@ trait HasKursusEndpoint
 {
     public function getKursusId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/kursus/id/{idRiwayatKursus}";
+        $urlFormat = '/kursus/id/{idRiwayatKursus}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasKursusEndpoint
 
     public function postKursusSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/kursus/save";
+        $urlFormat = '/kursus/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

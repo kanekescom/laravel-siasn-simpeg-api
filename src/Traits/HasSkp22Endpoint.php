@@ -9,7 +9,7 @@ trait HasSkp22Endpoint
 {
     public function postSkp2021Save(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/skp/2021/save";
+        $urlFormat = '/skp/2021/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasSkp22Endpoint
 
     public function getSkpId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/skp/id/{idRiwayatSkp}";
+        $urlFormat = '/skp/id/{idRiwayatSkp}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -25,7 +25,7 @@ trait HasSkp22Endpoint
 
     public function postSkpSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/skp/save";
+        $urlFormat = '/skp/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

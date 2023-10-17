@@ -9,7 +9,7 @@ trait HasPenghargaanEndpoint
 {
     public function getPenghargaanId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/penghargaan/id/{idRiwayatPenghargaan}";
+        $urlFormat = '/penghargaan/id/{idRiwayatPenghargaan}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasPenghargaanEndpoint
 
     public function postPenghargaanSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/penghargaan/save";
+        $urlFormat = '/penghargaan/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

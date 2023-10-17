@@ -9,7 +9,7 @@ trait HasJabatanEndpoint
 {
     public function getJabatanId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/jabatan/id/{idRiwayatJabatan}";
+        $urlFormat = '/jabatan/id/{idRiwayatJabatan}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasJabatanEndpoint
 
     public function getJabatanPns(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/jabatan/pns/{nipBaru}";
+        $urlFormat = '/jabatan/pns/{nipBaru}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -25,7 +25,7 @@ trait HasJabatanEndpoint
 
     public function postJabatanSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/jabatan/save";
+        $urlFormat = '/jabatan/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

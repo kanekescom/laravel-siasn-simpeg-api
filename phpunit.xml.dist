@@ -45,5 +45,17 @@
         <env name="SIASN_SSO_PASSWORD" value=""/>
         <env name="SIASN_CONST_INSTANSI_ID" value=""/>
         <env name="SIASN_CONST_SATUAN_KERJA_ID" value=""/>
+        
+        <env name="SIASN_PARAMS_TEST_NIP_BARU" value=""/>
+        <env name="SIASN_PARAMS_TEST_ORANG_ID" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_GET_DATA_ANAK_NIP_BARU" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AWAL" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AKHIR" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_GET_LIST_PENGADAAN_INSTANSI_TAHUN" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_GET_LIST_KP_INSTANSI_PERIODE" value=""/>
     </php>
 </phpunit>

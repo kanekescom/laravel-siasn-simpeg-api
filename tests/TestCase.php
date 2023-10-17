@@ -2,19 +2,14 @@
 
 namespace Kanekescom\Siasn\Api\Simpeg\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Kanekescom\Siasn\Api\Simpeg\SimpegServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
         parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Kanekescom/Siasn/Api/Simpeg\\Simpeg\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
-        );
     }
 
     protected function getPackageProviders($app)
@@ -26,11 +21,18 @@ class TestCase extends Orchestra
 
     public function getEnvironmentSetUp($app)
     {
-        config()->set('database.default', 'testing');
+        $app['config']->set('siasn-api', require __DIR__.'/../vendor/kanekescom/laravel-siasn-api/config/siasn-api.php');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-siasn-simpeg-api_table.php.stub';
-        $migration->up();
-        */
+        $app['config']->set('siasn-api.params_test.nip_baru', env('SIASN_PARAMS_TEST_NIP_BARU'));
+        $app['config']->set('siasn-api.params_test.orang_id', env('SIASN_PARAMS_TEST_ORANG_ID'));
+
+        $app['config']->set('siasn-api.params_test.get_data_anak_nip_baru', env('SIASN_PARAMS_TEST_GET_DATA_ANAK_NIP_BARU'));
+
+        $app['config']->set('siasn-api.params_test.get_list_pensiun_instansi_tgl_awal', env('SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AWAL'));
+        $app['config']->set('siasn-api.params_test.get_list_pensiun_instansi_tgl_akhir', env('SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AKHIR'));
+
+        $app['config']->set('siasn-api.params_test.get_list_pengadaan_instansi_tahun', env('SIASN_PARAMS_TEST_GET_LIST_PENGADAAN_INSTANSI_TAHUN'));
+
+        $app['config']->set('siasn-api.params_test.get_list_kp_instansi_periode', env('SIASN_PARAMS_TEST_GET_LIST_KP_INSTANSI_PERIODE'));
     }
 }

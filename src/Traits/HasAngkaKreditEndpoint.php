@@ -9,7 +9,7 @@ trait HasAngkaKreditEndpoint
 {
     public function getAngkaKreditId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/angkakredit/id/{idRiwayatAngkaKredit}";
+        $urlFormat = '/angkakredit/id/{idRiwayatAngkaKredit}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasAngkaKreditEndpoint
 
     public function postAngkaKreditSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/angkakredit/save";
+        $urlFormat = '/angkakredit/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

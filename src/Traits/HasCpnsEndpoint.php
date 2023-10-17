@@ -9,7 +9,7 @@ trait HasCpnsEndpoint
 {
     public function postCpnsSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/cpns/save";
+        $urlFormat = '/cpns/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

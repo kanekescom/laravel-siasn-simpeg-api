@@ -9,7 +9,7 @@ trait HasDokEndpoint
 {
     public function getDownloadDok(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/download-dok";
+        $urlFormat = '/download-dok';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasDokEndpoint
 
     public function postUploadDok(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/upload-dok";
+        $urlFormat = '/upload-dok';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -25,7 +25,7 @@ trait HasDokEndpoint
 
     public function postUploadDokRw(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/upload-dok-rw";
+        $urlFormat = '/upload-dok-rw';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

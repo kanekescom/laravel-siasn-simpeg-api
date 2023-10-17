@@ -9,7 +9,7 @@ trait HasReferensiEndpoint
 {
     public function getReferensiUnor(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/referensi/ref-unor";
+        $urlFormat = '/referensi/ref-unor';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

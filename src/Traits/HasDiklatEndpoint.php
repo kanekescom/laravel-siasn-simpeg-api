@@ -9,7 +9,7 @@ trait HasDiklatEndpoint
 {
     public function getDiklatId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/diklat/id/{idRiwayatDiklat}";
+        $urlFormat = '/diklat/id/{idRiwayatDiklat}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasDiklatEndpoint
 
     public function postDiklatSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/diklat/save";
+        $urlFormat = '/diklat/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

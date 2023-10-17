@@ -9,7 +9,7 @@ trait HasHukdisEndpoint
 {
     public function getHukdisId(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/hukdis/id/{idRiwayatHukdis}";
+        $urlFormat = '/hukdis/id/{idRiwayatHukdis}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);
@@ -17,7 +17,7 @@ trait HasHukdisEndpoint
 
     public function postHukdisSave(array $paths = [], array $queries = []): Response
     {
-        $urlFormat = "/hukdis/save";
+        $urlFormat = '/hukdis/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
         return $this->get($url, $queries);

@@ -22,7 +22,7 @@ class UrlParser
     {
         return collect($paths)->mapWithKeys(function (string $value, string $key) {
             return [
-                '{' . $key . '}' => $value,
+                '{'.$key.'}' => $value,
             ];
         });
     }
