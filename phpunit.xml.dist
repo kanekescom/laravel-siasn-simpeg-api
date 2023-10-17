@@ -48,14 +48,18 @@
         
         <env name="SIASN_PARAMS_TEST_NIP_BARU" value=""/>
         <env name="SIASN_PARAMS_TEST_ORANG_ID" value=""/>
-
+        <env name="SIASN_PARAMS_TEST_GET_ANGKA_KREDIT_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_DIKLAT_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_HUKDIS_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_JABATAN_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_KURSUS_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_PENGHARGAAN_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_SKP22_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_SKP_ID" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_DATA_ANAK_NIP_BARU" value=""/>
-
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AWAL" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AKHIR" value=""/>
-
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENGADAAN_INSTANSI_TAHUN" value=""/>
-
         <env name="SIASN_PARAMS_TEST_GET_LIST_KP_INSTANSI_PERIODE" value=""/>
     </php>
 </phpunit>
