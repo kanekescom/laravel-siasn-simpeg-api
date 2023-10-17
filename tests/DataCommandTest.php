@@ -23,3 +23,11 @@ it('can get data utama', function () {
 
     $this->artisan("siasn-simpeg:get-data-utama {$nip_baru}")->assertSuccessful();
 });
+
+it('can post data utama update', function () {
+    $query = config('siasn-api.params_test.post_data_utama_update_query');
+
+    $this->artisan('siasn-simpeg:post-data-utama-update')
+        ->expectsQuestion('Copy the json above, fill it and paste it here', $query)
+        ->assertSuccessful();
+});

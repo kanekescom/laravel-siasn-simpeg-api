@@ -61,5 +61,19 @@
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AKHIR" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENGADAAN_INSTANSI_TAHUN" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_KP_INSTANSI_PERIODE" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_ANGKA_KREDIT_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_CPNS_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_DATA_UTAMA_UPDATE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_DIKLAT_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_DOWNLOAD_DOK_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_RW_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_HUKDIS_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_JABATAN_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_KURSUS_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_PENGHARGAAN_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP22_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP2021_SAVE_QUERY" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP_SAVE_QUERY" value=""/>
     </php>
 </phpunit>
