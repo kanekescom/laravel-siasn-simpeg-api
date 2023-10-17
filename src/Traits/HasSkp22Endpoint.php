@@ -7,27 +7,19 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasSkp22Endpoint
 {
-    public function postSkp2021Save(array $paths = [], array $queries = []): Response
+    public function getSkp22Id(array $paths = [], array $query = []): Response
     {
-        $urlFormat = '/skp/2021/save';
+        $urlFormat = '/skp22/id/{idRiwayatSkp}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->get($url, $query);
     }
 
-    public function getSkpId(array $paths = [], array $queries = []): Response
+    public function postSkp22Save(array $paths = [], array $query = []): Response
     {
-        $urlFormat = '/skp/id/{idRiwayatSkp}';
+        $urlFormat = '/skp22/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
-    }
-
-    public function postSkpSave(array $paths = [], array $queries = []): Response
-    {
-        $urlFormat = '/skp/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
-
-        return $this->get($url, $queries);
+        return $this->post($url, $query);
     }
 }

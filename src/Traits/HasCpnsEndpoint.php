@@ -7,11 +7,11 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasCpnsEndpoint
 {
-    public function postCpnsSave(array $paths = [], array $queries = []): Response
+    public function postCpnsSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/cpns/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->post($url, $query);
     }
 }

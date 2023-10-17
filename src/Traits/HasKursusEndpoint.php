@@ -7,19 +7,19 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasKursusEndpoint
 {
-    public function getKursusId(array $paths = [], array $queries = []): Response
+    public function getKursusId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/kursus/id/{idRiwayatKursus}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->get($url, $query);
     }
 
-    public function postKursusSave(array $paths = [], array $queries = []): Response
+    public function postKursusSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/kursus/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->post($url, $query);
     }
 }

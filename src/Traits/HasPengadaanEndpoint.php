@@ -7,11 +7,11 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasPengadaanEndpoint
 {
-    public function getListPengadaanInstansi(array $paths = [], array $queries = []): Response
+    public function getListPengadaanInstansi(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pengadaan/list-pengadaan-instansi';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->get($url, $query);
     }
 }

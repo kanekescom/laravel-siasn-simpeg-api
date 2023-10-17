@@ -7,19 +7,19 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasDiklatEndpoint
 {
-    public function getDiklatId(array $paths = [], array $queries = []): Response
+    public function getDiklatId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/diklat/id/{idRiwayatDiklat}';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->get($url, $query);
     }
 
-    public function postDiklatSave(array $paths = [], array $queries = []): Response
+    public function postDiklatSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/diklat/save';
         $url = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $queries);
+        return $this->post($url, $query);
     }
 }
