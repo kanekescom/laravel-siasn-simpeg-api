@@ -26,6 +26,8 @@ class PostKursusSaveCommand extends Command
      */
     public function handle()
     {
+        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
+        $this->newLine();
         $this->comment('{"id":"string","instansiId":"string","institusiPenyelenggara":"string","jenisDiklatId":"string","jenisKursus":"string","jenisKursusSertipikat":"string","jumlahJam":0,"lokasiId":"string","namaKursus":"string","nomorSertipikat":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","tahunKursus":0,"tanggalKursus":"string","tanggalSelesaiKursus":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);

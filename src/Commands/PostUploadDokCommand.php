@@ -26,7 +26,9 @@ class PostUploadDokCommand extends Command
      */
     public function handle()
     {
-        $this->comment('{"id_ref_dokumen":0,"file":"string"}');
+        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
+        $this->newLine();
+        $this->comment('{"file":"string","id_ref_dokumen":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 

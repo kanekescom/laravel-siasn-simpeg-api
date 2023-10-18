@@ -45,35 +45,51 @@
         <env name="SIASN_SSO_PASSWORD" value=""/>
         <env name="SIASN_CONST_INSTANSI_ID" value=""/>
         <env name="SIASN_CONST_SATUAN_KERJA_ID" value=""/>
-        
+
         <env name="SIASN_PARAMS_TEST_NIP_BARU" value=""/>
         <env name="SIASN_PARAMS_TEST_ORANG_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_ANGKA_KREDIT_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_DIKLAT_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_HUKDIS_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_JABATAN_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_KURSUS_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_PENGHARGAAN_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_SKP22_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_SKP_ID" value=""/>
+
         <env name="SIASN_PARAMS_TEST_GET_DATA_ANAK_NIP_BARU" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_GET_ANGKA_KREDIT_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_ANGKA_KREDIT_SAVE_QUERY" value='{"bulanMulaiPenailan":"string","bulanSelesaiPenailan":"string","id":"string","isAngkaKreditPertama":"string","isIntegrasi":"string","isKonversi":"string","kreditBaruTotal":"string","kreditPenunjangBaru":"string","kreditUtamaBaru":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","rwJabatanId":"string","tahunMulaiPenailan":"string","tahunSelesaiPenailan":"string","tanggalSk":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_DIKLAT_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_DIKLAT_SAVE_QUERY" value='{"bobot":0,"id":"string","institusiPenyelenggara":"string","jenisKompetensi":"string","jumlahJam":0,"latihanStrukturalId":"string","nomor":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","tahun":0,"tanggal":"string","tanggalSelesai":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_HUKDIS_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_HUKDIS_SAVE_QUERY" value='{"akhirHukumanTanggal":"string","alasanHukumanDisiplinId":"string","golonganId":"string","golonganLama":"string","hukdisYangDiberhentikanId":"string","hukumanTanggal":"string","id":"string","jenisHukumanId":"string","jenisTingkatHukumanId":"string","kedudukanHukumId":"string","keterangan":"string","masaBulan":"string","masaTahun":"string","nomorPp":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","skNomor":"string","skPembatalanNomor":"string","skPembatalanTanggal":"string","skTanggal":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_JABATAN_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_JABATAN_SAVE_QUERY" value='{"eselonId":"string","id":"string","instansiId":"string","jabatanFungsionalId":"string","jabatanFungsionalUmumId":"string","jenisJabatan":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","satuanKerjaId":"string","tanggalSk":"string","tmtJabatan":"string","tmtPelantikan":"string","unorId":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_KURSUS_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_KURSUS_SAVE_QUERY" value='{"id":"string","instansiId":"string","institusiPenyelenggara":"string","jenisDiklatId":"string","jenisKursus":"string","jenisKursusSertipikat":"string","jumlahJam":0,"lokasiId":"string","namaKursus":"string","nomorSertipikat":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","tahunKursus":0,"tanggalKursus":"string","tanggalSelesaiKursus":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_PENGHARGAAN_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_PENGHARGAAN_SAVE_QUERY" value='{"hargaId":"string","id":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","skDate":"string","skNomor":"string","tahun":0}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_SKP22_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP22_SAVE_QUERY" value='{"hasilKinerjaNilai":0,"id":"string","kuadranKinerjaNilai":0,"path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"penilaiGolongan":"string","penilaiJabatan":"string","penilaiNama":"string","penilaiNipNrp":"string","penilaiUnorNama":"string","perilakuKerjaNilai":0,"pnsDinilaiOrang":"string","statusPenilai":"string","tahun":0}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_SKP_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP2021_SAVE_QUERY" value='{"atasanPejabatPenilai":"string","atasanPenilaiGolongan":"string","atasanPenilaiJabatan":"string","atasanPenilaiNama":"string","atasanPenilaiNipNrp":"string","atasanPenilaiTmtGolongan":"string","atasanPenilaiUnorNama":"string","disiplin":0,"id":"string","inisiatifKerja":0,"integritas":0,"jenisJabatan":"string","jenisPeraturanKinerjaKd":"string","jumlah":0,"kepemimpinan":0,"kerjasama":0,"komitmen":0,"konversiNilai":0,"nilaiIntegrasi":0,"nilaiPerilakuKerja":0,"nilaiPrestasiKerja":0,"nilaiSkp":0,"nilairatarata":0,"orientasiPelayanan":0,"pejabatPenilai":"string","penilaiGolongan":"string","penilaiJabatan":"string","penilaiNama":"string","penilaiNipNrp":"string","penilaiTmtGolongan":"string","penilaiUnorNama":"string","pnsDinilaiOrang":"string","statusAtasanPenilai":"string","statusPenilai":"string","tahun":0}'/>
+        <env name="SIASN_PARAMS_TEST_POST_SKP_SAVE_QUERY" value='{"atasanPejabatPenilai":"string","atasanPenilaiGolongan":"string","atasanPenilaiJabatan":"string","atasanPenilaiNama":"string","atasanPenilaiNipNrp":"string","atasanPenilaiTmtGolongan":"string","atasanPenilaiUnorNama":"string","disiplin":0,"id":"string","integritas":0,"jenisJabatan":"string","jumlah":0,"kepemimpinan":0,"kerjasama":0,"komitmen":0,"nilaiPerilakuKerja":0,"nilaiPrestasiKerja":0,"nilaiSkp":0,"nilairatarata":0,"orientasiPelayanan":0,"pejabatPenilai":"string","penilaiGolongan":"string","penilaiJabatan":"string","penilaiNama":"string","penilaiNipNrp":"string","penilaiTmtGolongan":"string","penilaiUnorNama":"string","pnsDinilaiOrang":"string","pnsUserId":"string","statusAtasanPenilai":"string","statusPenilai":"string","tahun":0}'/>
+
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AWAL" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENSIUN_INSTANSI_TGL_AKHIR" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_PENGADAAN_INSTANSI_TAHUN" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_LIST_KP_INSTANSI_PERIODE" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_ANGKA_KREDIT_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_CPNS_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_DATA_UTAMA_UPDATE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_DIKLAT_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_DOWNLOAD_DOK_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_RW_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_HUKDIS_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_JABATAN_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_KURSUS_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_PENGHARGAAN_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_SKP22_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_SKP2021_SAVE_QUERY" value=""/>
-        <env name="SIASN_PARAMS_TEST_POST_SKP_SAVE_QUERY" value=""/>
+
+        <env name="SIASN_PARAMS_TEST_POST_CPNS_SAVE_QUERY" value='{"id":"string","kartu_pegawai":"string","nama_jabatan_angkat_cpns":"string","nomor_dokter_pns":"string","nomor_sk_cpns":"string","nomor_sk_pns":"string","nomor_spmt":"string","nomor_sttpl":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pertek_cpns_pns_l2th_nomor":"string","pertek_cpns_pns_l2th_tanggal":"string","pns_orang_id":"string","status_cpns_pns":"string","tanggal_dokter_pns":"string","tgl_sk_cpns":"string","tgl_sk_pns":"string","tgl_sttpl":"string","tmt_pns":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_POST_DATA_UTAMA_UPDATE_QUERY" value='{"agama_id":"string","alamat":"string","email":"string","email_gov":"string","kabupaten_id":"string","karis_karsu":"string","kelas_jabatan":"string","kpkn_id":"string","lokasi_kerja_id":"string","nomor_bpjs":"string","nomor_hp":"string","nomor_telpon":"string","npwp_nomor":"string","npwp_tanggal":"string","pns_orang_id":"string","tanggal_taspen":"string","tapera_nomor":"string","taspen_nomor":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_GET_DOWNLOAD_DOK_QUERY" value='{"filePath":"string"}'/>
+
+        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_QUERY" value='{"file":"string","id_ref_dokumen":"string"}'/>
+        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_RW_QUERY" value='{"file":"string","id_riwayat":"string","id_ref_dokumen":"string"}'/>
+        
+        <env name="SIASN_PARAMS_TEST_POST_UPLOAD_DOK_SK_KP_QUERY" value='{"id_usulan":"string","no_sk":"string","tgl_sk":"string","file":"string"}'/>
     </php>
 </phpunit>

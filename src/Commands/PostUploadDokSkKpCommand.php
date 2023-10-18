@@ -26,6 +26,8 @@ class PostUploadDokSkKpCommand extends Command
      */
     public function handle()
     {
+        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
+        $this->newLine();
         $this->comment('{"id_usulan":"string","no_sk":"string","tgl_sk":"string","file":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
