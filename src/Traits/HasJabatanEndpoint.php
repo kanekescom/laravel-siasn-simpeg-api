@@ -10,24 +10,24 @@ trait HasJabatanEndpoint
     public function getJabatanId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/id/{idRiwayatJabatan}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function getJabatanPns(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/pns/{nipBaru}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postJabatanSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

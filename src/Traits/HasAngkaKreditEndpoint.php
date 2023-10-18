@@ -10,16 +10,16 @@ trait HasAngkaKreditEndpoint
     public function getAngkaKreditId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/angkakredit/id/{idRiwayatAngkaKredit}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postAngkaKreditSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/angkakredit/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

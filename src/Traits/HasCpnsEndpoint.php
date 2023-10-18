@@ -10,8 +10,8 @@ trait HasCpnsEndpoint
     public function postCpnsSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/cpns/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

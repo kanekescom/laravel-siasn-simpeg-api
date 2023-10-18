@@ -10,16 +10,16 @@ trait HasDiklatEndpoint
     public function getDiklatId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/diklat/id/{idRiwayatDiklat}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postDiklatSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/diklat/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

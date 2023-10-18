@@ -10,16 +10,16 @@ trait HasHukdisEndpoint
     public function getHukdisId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/hukdis/id/{idRiwayatHukdis}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postHukdisSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/hukdis/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

@@ -10,16 +10,16 @@ trait HasPenghargaanEndpoint
     public function getPenghargaanId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/penghargaan/id/{idRiwayatPenghargaan}';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postPenghargaanSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/penghargaan/save';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }

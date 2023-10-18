@@ -10,16 +10,16 @@ trait HasKpEndpoint
     public function getListKpInstansi(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pns/list-kp-instansi';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->get($url, $query);
+        return $this->get($urlParsed, $query);
     }
 
     public function postUploadDokSkKp(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/upload-dok-sk-kp';
-        $url = (new UrlParser($urlFormat))->parse($paths);
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
-        return $this->post($url, $query);
+        return $this->post($urlParsed, $query);
     }
 }
