@@ -1,5 +1,7 @@
 <?php
 
+use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
+
 it('can parse url', function () {
     $nipBaru = config('siasn-api.params_test.nip_baru');
     $paths = [
