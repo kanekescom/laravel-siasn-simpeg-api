@@ -2,83 +2,79 @@
 
 namespace Kanekescom\Siasn\Api\Simpeg;
 
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class SimpegServiceProvider extends ServiceProvider
+class SimpegServiceProvider extends PackageServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     */
-    public function boot(): void
+    public function configurePackage(Package $package): void
     {
-        $this->offerPublishing();
+        $package
+            ->name('laravel-siasn-simpeg-api')
+            ->hasConfigFile()
+            ->hasCommand(Commands\GetAngkaKreditIdCommand::class)
+            ->hasCommand(Commands\PostAngkaKreditSaveCommand::class)
+            ->hasCommand(Commands\PostCpnsSaveCommand::class)
+            ->hasCommand(Commands\GetDiklatIdCommand::class)
+            ->hasCommand(Commands\PostDiklatSaveCommand::class)
+            ->hasCommand(Commands\GetDownloadDokCommand::class)
+            ->hasCommand(Commands\PostUploadDokCommand::class)
+            ->hasCommand(Commands\PostUploadDokRwCommand::class)
+            ->hasCommand(Commands\GetHukdisIdCommand::class)
+            ->hasCommand(Commands\PostHukdisSaveCommand::class)
+            ->hasCommand(Commands\GetJabatanIdCommand::class)
+            ->hasCommand(Commands\GetJabatanPnsCommand::class)
+            ->hasCommand(Commands\PostJabatanSaveCommand::class)
+            ->hasCommand(Commands\GetKursusIdCommand::class)
+            ->hasCommand(Commands\PostKursusSaveCommand::class)
+            ->hasCommand(Commands\GetListPengadaanInstansiCommand::class)
+            ->hasCommand(Commands\GetPenghargaanIdCommand::class)
+            ->hasCommand(Commands\PostPenghargaanSaveCommand::class)
+            ->hasCommand(Commands\GetDataAnakCommand::class)
+            ->hasCommand(Commands\GetDataOrtuCommand::class)
+            ->hasCommand(Commands\GetDataPasanganCommand::class)
+            ->hasCommand(Commands\PostDataUtamaUpdateCommand::class)
+            ->hasCommand(Commands\GetDataUtamaCommand::class)
+            ->hasCommand(Commands\GetListKpInstansiCommand::class)
+            ->hasCommand(Commands\PostUploadDokSkKpCommand::class)
+            ->hasCommand(Commands\GetListPensiunInstansiCommand::class)
+            ->hasCommand(Commands\GetRwAngkaKreditCommand::class)
+            ->hasCommand(Commands\GetRwCltnCommand::class)
+            ->hasCommand(Commands\GetRwDiklatCommand::class)
+            ->hasCommand(Commands\GetRwDp3Command::class)
+            ->hasCommand(Commands\GetRwGolonganCommand::class)
+            ->hasCommand(Commands\GetRwHukdisCommand::class)
+            ->hasCommand(Commands\GetRwJabatanCommand::class)
+            ->hasCommand(Commands\GetRwKursusCommand::class)
+            ->hasCommand(Commands\GetRwMasaKerjaCommand::class)
+            ->hasCommand(Commands\GetRwPemberhentianCommand::class)
+            ->hasCommand(Commands\GetRwPendidikanCommand::class)
+            ->hasCommand(Commands\GetRwPenghargaanCommand::class)
+            ->hasCommand(Commands\GetRwPindahInstansiCommand::class)
+            ->hasCommand(Commands\GetRwUnorCommand::class)
+            ->hasCommand(Commands\GetRwPwkCommand::class)
+            ->hasCommand(Commands\GetRwSkpCommand::class)
+            ->hasCommand(Commands\GetRwSkp22Command::class)
+            ->hasCommand(Commands\GetReferensiUnorCommand::class)
+            ->hasCommand(Commands\PostSkp2021SaveCommand::class)
+            ->hasCommand(Commands\GetSkpIdCommand::class)
+            ->hasCommand(Commands\PostSkpSaveCommand::class)
+            ->hasCommand(Commands\GetSkp22IdCommand::class)
+            ->hasCommand(Commands\PostSkp22SaveCommand::class);
+    }
 
-        $this->registerCommands();
-
+    public function packageRegistered(): void
+    {
         $this->registerHttpMacroHelpers();
     }
 
-    /**
-     * Register any package services.
-     */
-    public function register(): void
-    {
-        $this->mergeConfigFrom(__DIR__ . '/../config/siasn_simpeg.php', 'siasn_simpeg');
-
-        // Register the service the package provides.
-        $this->app->singleton(Simpeg::class, function ($app) {
-            return new Simpeg;
-        });
-    }
-
-    /**
-     * Offer publishing.
-     */
-    protected function offerPublishing(): void
-    {
-        if (!$this->app->runningInConsole()) {
-            return;
-        }
-
-        if (!function_exists('config_path')) {
-            // function not available and 'publish' not relevant in Lumen
-            return;
-        }
-
-        $this->publishes([
-            __DIR__ . '/../config/siasn_simpeg.php' => config_path('siasn_simpeg.php'),
-        ], 'config');
-    }
-
-    /**
-     * Register commands.
-     */
-    protected function registerCommands(): void
-    {
-        if (!$this->app->runningInConsole()) {
-            return;
-        }
-
-        $this->commands([
-            Commands\GetDataUtama::class,
-            Commands\GetListPengadaan::class,
-            Commands\GetListPensiun::class,
-            Commands\GetReferensiUnor::class,
-            Commands\GetRiwayatJabatan::class,
-        ]);
-    }
-
-    /**
-     * Register HTTP Macros.
-     */
     protected function registerHttpMacroHelpers(): void
     {
-        if (!method_exists(Http::class, 'macro')) { // Lumen
+        if (! method_exists(\Illuminate\Support\Facades\Http::class, 'macro')) { // Lumen
             return;
         }
 
-        Http::macro('siasnSimpeg', function () {
+        \Illuminate\Support\Facades\Http::macro('siasnSimpeg', function () {
             return new Simpeg;
         });
     }

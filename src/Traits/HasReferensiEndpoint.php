@@ -3,14 +3,15 @@
 namespace Kanekescom\Siasn\Api\Simpeg\Traits;
 
 use Illuminate\Http\Client\Response;
+use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasReferensiEndpoint
 {
-    /**
-     * Issue a GET request.
-     */
-    public function getRefUnor(): Response
+    public function getReferensiUnor(array $paths = [], array $query = []): Response
     {
-        return $this->get('/referensi/ref-unor');
+        $urlFormat = '/referensi/ref-unor';
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
+
+        return $this->get($urlParsed, $query);
     }
 }
