@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get hukdis id', function () {
     $id = config('siasn-api.params_test.get_hukdis_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatHukdis' => $id,
     ];
     $response = Simpeg::getHukdisId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

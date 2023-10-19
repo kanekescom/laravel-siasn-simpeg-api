@@ -4,17 +4,22 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get jabatan id', function () {
     $id = config('siasn-api.params_test.get_jabatan_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatJabatan' => $id,
     ];
     $response = Simpeg::getJabatanId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 
 it('can get jabatan pns', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];

@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get penghargaan id', function () {
     $id = config('siasn-api.params_test.get_penghargaan_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatPenghargaan' => $id,
     ];
     $response = Simpeg::getPenghargaanId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

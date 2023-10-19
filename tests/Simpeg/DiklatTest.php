@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get diklat id', function () {
     $id = config('siasn-api.params_test.get_diklat_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatDiklat' => $id,
     ];
     $response = Simpeg::getDiklatId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

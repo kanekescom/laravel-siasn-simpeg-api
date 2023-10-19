@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get angka kredit id', function () {
     $id = config('siasn-api.params_test.get_angka_kredit_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatAngkaKredit' => $id,
     ];
     $response = Simpeg::getAngkaKreditId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

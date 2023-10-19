@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get kursus id', function () {
     $id = config('siasn-api.params_test.get_kursus_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatKursus' => $id,
     ];
     $response = Simpeg::getKursusId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

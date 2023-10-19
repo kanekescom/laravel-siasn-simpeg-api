@@ -3,7 +3,10 @@
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get rw angka kredit', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -14,7 +17,10 @@ it('can get rw angka kredit', function () {
 });
 
 it('can get rw cltn', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -25,7 +31,10 @@ it('can get rw cltn', function () {
 });
 
 it('can get rw diklat', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -36,7 +45,10 @@ it('can get rw diklat', function () {
 });
 
 it('can get rw dp3', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -47,7 +59,10 @@ it('can get rw dp3', function () {
 });
 
 it('can get rw golongan', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -58,7 +73,10 @@ it('can get rw golongan', function () {
 });
 
 it('can get rw hukdis', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -69,7 +87,10 @@ it('can get rw hukdis', function () {
 });
 
 it('can get rw jabatan', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -80,7 +101,10 @@ it('can get rw jabatan', function () {
 });
 
 it('can get rw kursus', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -91,7 +115,10 @@ it('can get rw kursus', function () {
 });
 
 it('can get rw masa kerja', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -102,7 +129,10 @@ it('can get rw masa kerja', function () {
 });
 
 it('can get rw pemberhentian', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -113,7 +143,10 @@ it('can get rw pemberhentian', function () {
 });
 
 it('can get rw pendidikan', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -124,7 +157,10 @@ it('can get rw pendidikan', function () {
 });
 
 it('can get rw penghargaan', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -135,7 +171,10 @@ it('can get rw penghargaan', function () {
 });
 
 it('can get rw pindah instansi', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -146,7 +185,10 @@ it('can get rw pindah instansi', function () {
 });
 
 it('can get rw unor', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -157,7 +199,10 @@ it('can get rw unor', function () {
 });
 
 it('can get rw pwk', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -168,7 +213,10 @@ it('can get rw pwk', function () {
 });
 
 it('can get rw skp', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -179,7 +227,10 @@ it('can get rw skp', function () {
 });
 
 it('can get rw skp22', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];

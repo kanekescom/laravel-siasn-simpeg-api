@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get list kp instansi', function () {
     $periode = config('siasn-api.params_test.get_list_kp_instansi_periode');
+
+    expect($periode)->not->toBeEmpty();
+
     $paths = [
         'periode' => $periode,
     ];
     $response = Simpeg::getListKpInstansi($paths);
 
-    expect($periode)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

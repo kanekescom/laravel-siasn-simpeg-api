@@ -4,12 +4,14 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get skp id', function () {
     $id = config('siasn-api.params_test.get_skp_id');
+
+    expect($id)->not->toBeEmpty();
+
     $paths = [
         'idRiwayatSkp' => $id,
     ];
     $response = Simpeg::getSkpId($paths);
 
-    expect($id)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 

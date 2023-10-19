@@ -4,17 +4,22 @@ use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get data anak', function () {
     $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getDataAnak($paths);
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
 });
 
 it('can get data ortu', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -25,7 +30,10 @@ it('can get data ortu', function () {
 });
 
 it('can get data pasangan', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
@@ -36,7 +44,10 @@ it('can get data pasangan', function () {
 });
 
 it('can get data utama', function () {
-    $nipBaru = config('siasn-api.params_test.nip_baru');
+    $nipBaru = config('siasn-api.params_test.get_data_anak_nip_baru');
+
+    expect($nipBaru)->not->toBeEmpty();
+
     $paths = [
         'nipBaru' => $nipBaru,
     ];
