@@ -27,6 +27,7 @@ class GetJabatanPnsCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $nipBaru = $this->argument('nipBaru');
         $paths = [
             'nipBaru' => $nipBaru,
@@ -36,6 +37,9 @@ class GetJabatanPnsCommand extends Command
             Simpeg::getJabatanPns($paths)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

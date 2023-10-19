@@ -27,6 +27,7 @@ class GetJabatanIdCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $id = $this->argument('id');
         $paths = [
             'idRiwayatJabatan' => $id,
@@ -36,6 +37,9 @@ class GetJabatanIdCommand extends Command
             Simpeg::getJabatanId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

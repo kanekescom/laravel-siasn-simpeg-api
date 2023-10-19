@@ -27,13 +27,14 @@ class PostUploadDokSkKpCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"id_usulan":"string","no_sk":"string","tgl_sk":"string","file":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
-        if (! is_array($query)) {
+        if (!is_array($query)) {
             throw new InvalidJsonException;
 
             return self::FAILURE;
@@ -43,6 +44,9 @@ class PostUploadDokSkKpCommand extends Command
             Simpeg::postUploadDokSkKp([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

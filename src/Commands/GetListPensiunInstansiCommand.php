@@ -28,6 +28,7 @@ class GetListPensiunInstansiCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $tglAwal = $this->argument('tglAwal');
         $tglAkhir = $this->argument('tglAkhir');
         $query = [
@@ -39,6 +40,9 @@ class GetListPensiunInstansiCommand extends Command
             Simpeg::getListPensiunInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

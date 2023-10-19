@@ -27,11 +27,12 @@ class GetDownloadDokCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->comment('{"filePath":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
-        if (! is_array($query)) {
+        if (!is_array($query)) {
             throw new InvalidJsonException;
 
             return self::FAILURE;
@@ -41,6 +42,9 @@ class GetDownloadDokCommand extends Command
             Simpeg::getDownloadDok([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

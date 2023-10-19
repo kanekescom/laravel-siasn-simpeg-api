@@ -27,13 +27,14 @@ class PostAngkaKreditSaveCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"bulanMulaiPenailan":"string","bulanSelesaiPenailan":"string","id":"string","isAngkaKreditPertama":"string","isIntegrasi":"string","isKonversi":"string","kreditBaruTotal":"string","kreditPenunjangBaru":"string","kreditUtamaBaru":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","rwJabatanId":"string","tahunMulaiPenailan":"string","tahunSelesaiPenailan":"string","tanggalSk":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
-        if (! is_array($query)) {
+        if (!is_array($query)) {
             throw new InvalidJsonException;
 
             return self::FAILURE;
@@ -43,6 +44,9 @@ class PostAngkaKreditSaveCommand extends Command
             Simpeg::postAngkaKreditSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }
