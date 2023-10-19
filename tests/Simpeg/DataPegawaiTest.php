@@ -11,8 +11,12 @@ it('can get data anak', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getDataAnak($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get data ortu', function () {
@@ -24,9 +28,12 @@ it('can get data ortu', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getDataOrtu($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get data pasangan', function () {
@@ -38,9 +45,12 @@ it('can get data pasangan', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getDataPasangan($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get data utama', function () {
@@ -52,9 +62,12 @@ it('can get data utama', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getDataUtama($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post data utama update', function () {
@@ -63,6 +76,10 @@ it('can post data utama update', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postDataUtamaUpdate([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

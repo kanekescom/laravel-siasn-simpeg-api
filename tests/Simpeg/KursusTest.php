@@ -11,8 +11,12 @@ it('can get kursus id', function () {
         'idRiwayatKursus' => $id,
     ];
     $response = Simpeg::getKursusId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post kursus save', function () {
@@ -21,6 +25,10 @@ it('can post kursus save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postKursusSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

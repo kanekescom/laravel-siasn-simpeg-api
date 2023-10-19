@@ -11,9 +11,12 @@ it('can get rw angka kredit', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwAngkaKredit($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw cltn', function () {
@@ -25,9 +28,12 @@ it('can get rw cltn', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwCltn($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw diklat', function () {
@@ -39,9 +45,12 @@ it('can get rw diklat', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwDiklat($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw dp3', function () {
@@ -53,9 +62,12 @@ it('can get rw dp3', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwDp3($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw golongan', function () {
@@ -67,9 +79,12 @@ it('can get rw golongan', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwGolongan($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw hukdis', function () {
@@ -81,9 +96,12 @@ it('can get rw hukdis', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwHukdis($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw jabatan', function () {
@@ -95,9 +113,12 @@ it('can get rw jabatan', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwJabatan($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw kursus', function () {
@@ -109,9 +130,12 @@ it('can get rw kursus', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwKursus($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw masa kerja', function () {
@@ -123,9 +147,12 @@ it('can get rw masa kerja', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwMasaKerja($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw pemberhentian', function () {
@@ -137,9 +164,12 @@ it('can get rw pemberhentian', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwPemberhentian($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw pendidikan', function () {
@@ -151,9 +181,12 @@ it('can get rw pendidikan', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwPendidikan($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw penghargaan', function () {
@@ -165,9 +198,12 @@ it('can get rw penghargaan', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwPenghargaan($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw pindah instansi', function () {
@@ -179,9 +215,12 @@ it('can get rw pindah instansi', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwPindahInstansi($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw unor', function () {
@@ -193,9 +232,12 @@ it('can get rw unor', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwUnor($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw pwk', function () {
@@ -207,9 +249,12 @@ it('can get rw pwk', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwPwk($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw skp', function () {
@@ -221,9 +266,12 @@ it('can get rw skp', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwSkp($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get rw skp22', function () {
@@ -235,7 +283,10 @@ it('can get rw skp22', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getRwSkp22($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });

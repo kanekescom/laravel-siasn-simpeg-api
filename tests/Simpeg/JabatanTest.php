@@ -11,8 +11,12 @@ it('can get jabatan id', function () {
         'idRiwayatJabatan' => $id,
     ];
     $response = Simpeg::getJabatanId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can get jabatan pns', function () {
@@ -24,9 +28,12 @@ it('can get jabatan pns', function () {
         'nipBaru' => $nipBaru,
     ];
     $response = Simpeg::getJabatanPns($paths);
+    $result = $response->collect()->toArray();
 
-    expect($nipBaru)->not->toBeEmpty();
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post jabatan save', function () {
@@ -35,6 +42,10 @@ it('can post jabatan save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postJabatanSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

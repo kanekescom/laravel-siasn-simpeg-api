@@ -11,8 +11,12 @@ it('can get list kp instansi', function () {
         'periode' => $periode,
     ];
     $response = Simpeg::getListKpInstansi($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post upload dok sk kp', function () {
@@ -21,6 +25,10 @@ it('can post upload dok sk kp', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postUploadDokSkKp([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

@@ -11,8 +11,12 @@ it('can get hukdis id', function () {
         'idRiwayatHukdis' => $id,
     ];
     $response = Simpeg::getHukdisId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post hukdis save', function () {
@@ -21,6 +25,10 @@ it('can post hukdis save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postHukdisSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

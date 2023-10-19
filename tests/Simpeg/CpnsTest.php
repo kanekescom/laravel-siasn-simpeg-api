@@ -8,6 +8,10 @@ it('can post cpns save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postCpnsSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

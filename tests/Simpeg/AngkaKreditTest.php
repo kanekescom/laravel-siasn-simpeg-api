@@ -11,8 +11,12 @@ it('can get angka kredit id', function () {
         'idRiwayatAngkaKredit' => $id,
     ];
     $response = Simpeg::getAngkaKreditId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post angka kredit save', function () {
@@ -21,6 +25,10 @@ it('can post angka kredit save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postAngkaKreditSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

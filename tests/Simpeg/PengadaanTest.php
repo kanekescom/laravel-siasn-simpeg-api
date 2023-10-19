@@ -11,6 +11,10 @@ it('can get list pengadaan instansi', function () {
         'tahun' => $tahun,
     ];
     $response = Simpeg::getListPengadaanInstansi([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });

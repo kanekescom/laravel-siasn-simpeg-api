@@ -8,8 +8,12 @@ it('can get download dok', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::getDownloadDok([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post upload dok', function () {
@@ -18,8 +22,12 @@ it('can post upload dok', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postUploadDok([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });
 
 it('can post upload dok rw', function () {
@@ -28,6 +36,10 @@ it('can post upload dok rw', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postUploadDokRw([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

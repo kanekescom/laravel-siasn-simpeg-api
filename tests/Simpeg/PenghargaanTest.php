@@ -11,8 +11,12 @@ it('can get penghargaan id', function () {
         'idRiwayatPenghargaan' => $id,
     ];
     $response = Simpeg::getPenghargaanId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post penghargaan save', function () {
@@ -21,6 +25,10 @@ it('can post penghargaan save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postPenghargaanSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

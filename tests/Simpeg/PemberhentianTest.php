@@ -14,6 +14,10 @@ it('can get list pensiun instansi', function () {
         'tglAkhir' => $tglAkhir,
     ];
     $response = Simpeg::getListPensiunInstansi($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });

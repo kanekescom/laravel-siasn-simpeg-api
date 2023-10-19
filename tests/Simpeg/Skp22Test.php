@@ -11,8 +11,12 @@ it('can get skp22 id', function () {
         'idRiwayatSkp' => $id,
     ];
     $response = Simpeg::getSkp22Id($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post skp22 save', function () {
@@ -21,6 +25,10 @@ it('can post skp22 save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postSkp22Save([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });

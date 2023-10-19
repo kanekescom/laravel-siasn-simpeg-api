@@ -11,8 +11,12 @@ it('can get diklat id', function () {
         'idRiwayatDiklat' => $id,
     ];
     $response = Simpeg::getDiklatId($paths);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
 });
 
 it('can post diklat save', function () {
@@ -21,6 +25,10 @@ it('can post diklat save', function () {
     expect($query)->toBeArray();
 
     $response = Simpeg::postDiklatSave([], $query);
+    $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'success' => true,
+    ]);
 });
