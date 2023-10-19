@@ -27,6 +27,7 @@ class GetHukdisIdCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $id = $this->argument('id');
         $paths = [
             'idRiwayatHukdis' => $id,
@@ -36,6 +37,9 @@ class GetHukdisIdCommand extends Command
             Simpeg::getHukdisId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

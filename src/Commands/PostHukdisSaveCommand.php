@@ -27,6 +27,7 @@ class PostHukdisSaveCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"akhirHukumanTanggal":"string","alasanHukumanDisiplinId":"string","golonganId":"string","golonganLama":"string","hukdisYangDiberhentikanId":"string","hukumanTanggal":"string","id":"string","jenisHukumanId":"string","jenisTingkatHukumanId":"string","kedudukanHukumId":"string","keterangan":"string","masaBulan":"string","masaTahun":"string","nomorPp":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsOrangId":"string","skNomor":"string","skPembatalanNomor":"string","skPembatalanTanggal":"string","skTanggal":"string"}');
@@ -43,6 +44,9 @@ class PostHukdisSaveCommand extends Command
             Simpeg::postHukdisSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

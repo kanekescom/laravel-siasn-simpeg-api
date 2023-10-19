@@ -27,6 +27,7 @@ class GetRwPwkCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $nipBaru = $this->argument('nipBaru');
         $paths = [
             'nipBaru' => $nipBaru,
@@ -36,6 +37,9 @@ class GetRwPwkCommand extends Command
             Simpeg::getRwPwk($paths)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

@@ -27,6 +27,7 @@ class PostDataUtamaUpdateCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"agama_id":"string","alamat":"string","email":"string","email_gov":"string","kabupaten_id":"string","karis_karsu":"string","kelas_jabatan":"string","kpkn_id":"string","lokasi_kerja_id":"string","nomor_bpjs":"string","nomor_hp":"string","nomor_telpon":"string","npwp_nomor":"string","npwp_tanggal":"string","pns_orang_id":"string","tanggal_taspen":"string","tapera_nomor":"string","taspen_nomor":"string"}');
@@ -43,6 +44,9 @@ class PostDataUtamaUpdateCommand extends Command
             Simpeg::postDataUtamaUpdate([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

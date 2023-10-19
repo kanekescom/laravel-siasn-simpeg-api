@@ -27,6 +27,7 @@ class PostSkpSaveCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"atasanPejabatPenilai":"string","atasanPenilaiGolongan":"string","atasanPenilaiJabatan":"string","atasanPenilaiNama":"string","atasanPenilaiNipNrp":"string","atasanPenilaiTmtGolongan":"string","atasanPenilaiUnorNama":"string","disiplin":0,"id":"string","integritas":0,"jenisJabatan":"string","jumlah":0,"kepemimpinan":0,"kerjasama":0,"komitmen":0,"nilaiPerilakuKerja":0,"nilaiPrestasiKerja":0,"nilaiSkp":0,"nilairatarata":0,"orientasiPelayanan":0,"pejabatPenilai":"string","penilaiGolongan":"string","penilaiJabatan":"string","penilaiNama":"string","penilaiNipNrp":"string","penilaiTmtGolongan":"string","penilaiUnorNama":"string","pnsDinilaiOrang":"string","pnsUserId":"string","statusAtasanPenilai":"string","statusPenilai":"string","tahun":0}');
@@ -43,6 +44,9 @@ class PostSkpSaveCommand extends Command
             Simpeg::postSkpSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

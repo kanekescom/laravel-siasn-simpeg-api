@@ -27,6 +27,7 @@ class GetListPengadaanInstansiCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $tahun = $this->argument('tahun');
         $query = [
             'tahun' => $tahun,
@@ -36,6 +37,9 @@ class GetListPengadaanInstansiCommand extends Command
             Simpeg::getListPengadaanInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

@@ -27,6 +27,7 @@ class PostJabatanSaveCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"eselonId":"string","id":"string","instansiId":"string","jabatanFungsionalId":"string","jabatanFungsionalUmumId":"string","jenisJabatan":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","satuanKerjaId":"string","tanggalSk":"string","tmtJabatan":"string","tmtPelantikan":"string","unorId":"string"}');
@@ -43,6 +44,9 @@ class PostJabatanSaveCommand extends Command
             Simpeg::postJabatanSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

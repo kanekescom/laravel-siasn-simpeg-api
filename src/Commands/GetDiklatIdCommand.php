@@ -27,6 +27,7 @@ class GetDiklatIdCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $id = $this->argument('id');
         $paths = [
             'idRiwayatDiklat' => $id,
@@ -36,6 +37,9 @@ class GetDiklatIdCommand extends Command
             Simpeg::getDiklatId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

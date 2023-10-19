@@ -27,6 +27,7 @@ class PostUploadDokRwCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
         $this->newLine();
         $this->comment('{"file":"string","id_riwayat":"string","id_ref_dokumen":"string"}');
@@ -43,6 +44,9 @@ class PostUploadDokRwCommand extends Command
             Simpeg::postUploadDokRw([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }

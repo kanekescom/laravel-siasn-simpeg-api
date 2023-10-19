@@ -27,6 +27,7 @@ class GetListKpInstansiCommand extends Command
      */
     public function handle()
     {
+        $start = now();
         $periode = $this->argument('periode');
         $query = [
             'periode' => $periode,
@@ -36,6 +37,9 @@ class GetListKpInstansiCommand extends Command
             Simpeg::getListKpInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
+
+        $this->newLine();
+        $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;
     }
