@@ -34,7 +34,7 @@ class PostSkp2021SaveCommand extends Command
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
 
-        if (!is_array($query)) {
+        if (! is_array($query)) {
             throw new InvalidJsonException;
 
             return self::FAILURE;
