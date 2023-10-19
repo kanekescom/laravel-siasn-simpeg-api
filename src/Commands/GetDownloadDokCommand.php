@@ -3,6 +3,7 @@
 namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
+use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 class GetDownloadDokCommand extends Command
@@ -29,6 +30,12 @@ class GetDownloadDokCommand extends Command
         $this->comment('{"filePath":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+
+        if (! is_array($query)) {
+            throw new InvalidJsonException;
+
+            return self::FAILURE;
+        }
 
         $this->info(json_encode(
             Simpeg::getDownloadDok([], $query)->object(),

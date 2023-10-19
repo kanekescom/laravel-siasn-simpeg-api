@@ -3,6 +3,7 @@
 namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
+use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 class PostUploadDokSkKpCommand extends Command
@@ -31,6 +32,12 @@ class PostUploadDokSkKpCommand extends Command
         $this->comment('{"id_usulan":"string","no_sk":"string","tgl_sk":"string","file":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
+
+        if (! is_array($query)) {
+            throw new InvalidJsonException;
+
+            return self::FAILURE;
+        }
 
         $this->info(json_encode(
             Simpeg::postUploadDokSkKp([], $query)->object(),
