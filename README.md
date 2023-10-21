@@ -25,13 +25,6 @@ You can install the package via composer:
 composer require kanekescom/laravel-siasn-simpeg-api
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-siasn-simpeg-api-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
