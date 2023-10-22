@@ -28,7 +28,7 @@ composer require kanekescom/laravel-siasn-simpeg-api
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-siasn-simpeg-api-config"
+php artisan vendor:publish --tag="siasn-simpeg-api-config"
 ```
 
 ## Usage
