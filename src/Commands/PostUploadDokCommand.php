@@ -27,9 +27,7 @@ class PostUploadDokCommand extends Command
      */
     public function handle()
     {
-        $start = now();
-        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
-        $this->newLine();
+        $this->components->warn('This action can change the data on SIASN BKN.');
         $this->comment('{"file":"string","id_ref_dokumen":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
@@ -39,6 +37,8 @@ class PostUploadDokCommand extends Command
 
             return self::FAILURE;
         }
+
+        $start = now();
 
         $this->info(json_encode(
             Simpeg::postUploadDok([], $query)->object(),

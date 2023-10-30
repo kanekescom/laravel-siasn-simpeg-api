@@ -38,6 +38,8 @@ class GetDownloadDokCommand extends Command
             return self::FAILURE;
         }
 
+        $start = now();
+
         $this->info(json_encode(
             Simpeg::getDownloadDok([], $query)->object(),
             JSON_PRETTY_PRINT
