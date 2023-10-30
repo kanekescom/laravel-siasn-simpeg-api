@@ -27,9 +27,7 @@ class PostUploadDokSkKpCommand extends Command
      */
     public function handle()
     {
-        $start = now();
-        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
-        $this->newLine();
+        $this->components->warn('This action can change the data on SIASN BKN.');
         $this->comment('{"id_usulan":"string","no_sk":"string","tgl_sk":"string","file":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
@@ -39,6 +37,8 @@ class PostUploadDokSkKpCommand extends Command
 
             return self::FAILURE;
         }
+
+        $start = now();
 
         $this->info(json_encode(
             Simpeg::postUploadDokSkKp([], $query)->object(),

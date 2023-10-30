@@ -26,6 +26,6 @@ class Simpeg extends ClassExtender
 
     public function __construct()
     {
-        $this->class = Siasn::baseUrl(config('siasn-simpeg-api.base_url'));
+        $this->class = Siasn::withSso()->baseUrl(config('siasn-simpeg-api.base_url'));
     }
 }

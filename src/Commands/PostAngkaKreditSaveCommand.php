@@ -27,9 +27,7 @@ class PostAngkaKreditSaveCommand extends Command
      */
     public function handle()
     {
-        $start = now();
-        $this->line('<bg=yellow> BE CAREFUL! </> This action can change the data on SIASN BKN.');
-        $this->newLine();
+        $this->components->warn('This action can change the data on SIASN BKN.');
         $this->comment('{"bulanMulaiPenailan":"string","bulanSelesaiPenailan":"string","id":"string","isAngkaKreditPertama":"string","isIntegrasi":"string","isKonversi":"string","kreditBaruTotal":"string","kreditPenunjangBaru":"string","kreditUtamaBaru":"string","nomorSk":"string","path":[{"dok_id":"string","dok_nama":"string","dok_uri":"string","object":"string","slug":"string"}],"pnsId":"string","rwJabatanId":"string","tahunMulaiPenailan":"string","tahunSelesaiPenailan":"string","tanggalSk":"string"}');
 
         $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
@@ -39,6 +37,8 @@ class PostAngkaKreditSaveCommand extends Command
 
             return self::FAILURE;
         }
+
+        $start = now();
 
         $this->info(json_encode(
             Simpeg::postAngkaKreditSave([], $query)->object(),
