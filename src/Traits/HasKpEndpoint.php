@@ -7,7 +7,7 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasKpEndpoint
 {
-    public function getListKpInstansi(array $paths = [], array $query = []): Response
+    public function getPnsListKpInstansi(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pns/list-kp-instansi';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

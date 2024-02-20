@@ -20,7 +20,7 @@ class PostKursusSaveCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Send POST request to /kursus/id/{idRiwayatKursus} endpoint';
+    protected $description = 'Send POST request to /kursus/save endpoint';
 
     /**
      * Execute the console command.

@@ -2,15 +2,15 @@
 
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
-it('can get list pengadaan instansi', function () {
-    $tahun = config('siasn-api.params_test.get_list_pengadaan_instansi_tahun');
+it('can get pengadaan list pengadaan instansi', function () {
+    $tahun = config('siasn-simpeg-api.params_test.get_pengadaan_list_pengadaan_instansi_tahun');
 
     expect($tahun)->not->toBeEmpty();
 
     $query = [
         'tahun' => $tahun,
     ];
-    $response = Simpeg::getListPengadaanInstansi([], $query);
+    $response = Simpeg::getPengadaanListPengadaanInstansi([], $query);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

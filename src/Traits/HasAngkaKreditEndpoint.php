@@ -7,7 +7,15 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasAngkaKreditEndpoint
 {
-    public function getAngkaKreditId(array $paths = [], array $query = []): Response
+    public function deleteAngkakreditDelete(array $paths = [], array $query = []): Response
+    {
+        $urlFormat = '/angkakredit/delete/{idRiwayatAngkaKredit}';
+        $urlParsed = (new UrlParser($urlFormat))->parse($paths);
+
+        return $this->delete($urlParsed, $query);
+    }
+
+    public function getAngkakreditId(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/angkakredit/id/{idRiwayatAngkaKredit}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
@@ -15,7 +23,7 @@ trait HasAngkaKreditEndpoint
         return $this->get($urlParsed, $query);
     }
 
-    public function postAngkaKreditSave(array $paths = [], array $query = []): Response
+    public function postAngkakreditSave(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/angkakredit/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
