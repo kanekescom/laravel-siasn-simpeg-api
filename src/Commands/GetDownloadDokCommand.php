@@ -3,7 +3,8 @@
 namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
+use Illuminate\Support\Facades\Storage;
+use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidFilePathException;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 class GetDownloadDokCommand extends Command
@@ -28,24 +29,31 @@ class GetDownloadDokCommand extends Command
     public function handle()
     {
         $start = now();
-        $this->comment('{"filePath":"string"}');
+        $query = ['filePath' => $this->ask('Write down file path')];
 
-        $query = json_decode($this->ask('Copy the json above, fill it and paste it here'), true);
-
-        if (! is_array($query)) {
-            throw new InvalidJsonException;
+        if (blank($query)) {
+            throw new InvalidFilePathException;
 
             return self::FAILURE;
         }
 
-        $start = now();
+        $response = Simpeg::getDownloadDok([], $query);
+        $content = $response->getBody()->getContents();
 
-        $this->info(json_encode(
-            Simpeg::getDownloadDok([], $query)->object(),
-            JSON_PRETTY_PRINT
-        ));
+        if ($content == null) {
+            $this->components->error('Content not found');
 
-        $this->newLine();
+            return self::FAILURE;
+        }
+
+        $filename = 'siasn-simpeg/'.$query['filePath'];
+
+        Storage::disk('local')->put($filename, $content);
+
+        $filepath = Storage::disk('local')->path($filename);
+
+        $this->components->info("Downloaded to {$filepath}");
+
         $this->comment("Processed in {$start->shortAbsoluteDiffForHumans(now(), 1)}");
 
         return self::SUCCESS;

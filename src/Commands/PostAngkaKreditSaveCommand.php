@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
-class PostAngkaKreditSaveCommand extends Command
+class PostAngkakreditSaveCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'siasn-simpeg:post-angka-kredit-save';
+    protected $signature = 'siasn-simpeg:post-angkakredit-save';
 
     /**
      * The console command description.

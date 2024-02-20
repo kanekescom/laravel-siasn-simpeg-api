@@ -7,7 +7,7 @@ use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
 
 trait HasReferensiEndpoint
 {
-    public function getReferensiUnor(array $paths = [], array $query = []): Response
+    public function getReferensiRefUnor(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/referensi/ref-unor';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

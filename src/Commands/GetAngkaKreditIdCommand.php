@@ -5,14 +5,14 @@ namespace Kanekescom\Siasn\Api\Simpeg\Commands;
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
-class GetAngkaKreditIdCommand extends Command
+class GetAngkakreditIdCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'siasn-simpeg:get-angka-kredit-id
+    protected $signature = 'siasn-simpeg:get-angkakredit-id
                             {id : idRiwayatAngkaKredit}';
 
     /**
@@ -34,7 +34,7 @@ class GetAngkaKreditIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getAngkaKreditId($paths)->object(),
+            Simpeg::getAngkakreditId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

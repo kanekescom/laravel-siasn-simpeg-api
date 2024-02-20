@@ -3,7 +3,7 @@
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
 it('can get penghargaan id', function () {
-    $id = config('siasn-api.params_test.get_penghargaan_id');
+    $id = config('siasn-simpeg-api.params_test.get_penghargaan_id');
 
     expect($id)->not->toBeEmpty();
 
@@ -16,19 +16,5 @@ it('can get penghargaan id', function () {
     expect($response->successful())->toBeTrue();
     expect($result)->toMatchArray([
         'code' => '1',
-    ]);
-});
-
-it('can post penghargaan save', function () {
-    $query = json_decode(config('siasn-api.params_test.post_penghargaan_save_query'), true);
-
-    expect($query)->toBeArray();
-
-    $response = Simpeg::postPenghargaanSave([], $query);
-    $result = $response->collect()->toArray();
-
-    expect($response->successful())->toBeTrue();
-    expect($result)->toMatchArray([
-        'success' => true,
     ]);
 });

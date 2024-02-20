@@ -2,18 +2,18 @@
 
 use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
 
-it('can get list pensiun instansi', function () {
-    $tglAwal = config('siasn-api.params_test.get_list_pensiun_instansi_tgl_awal');
-    $tglAkhir = config('siasn-api.params_test.get_list_pensiun_instansi_tgl_akhir');
+it('can get pns list pensiun instansi', function () {
+    $tglAwal = config('siasn-simpeg-api.params_test.get_pns_list_pensiun_instansi_tglawal');
+    $tglAkhir = config('siasn-simpeg-api.params_test.get_pns_list_pensiun_instansi_tglakhir');
 
     expect($tglAwal)->not->toBeEmpty();
     expect($tglAkhir)->not->toBeEmpty();
 
-    $paths = [
+    $query = [
         'tglAwal' => $tglAwal,
         'tglAkhir' => $tglAkhir,
     ];
-    $response = Simpeg::getListPensiunInstansi($paths);
+    $response = Simpeg::getPnsListPensiunInstansi([], $query);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();
