@@ -34,7 +34,7 @@ class DeleteKinerjaperiodikDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getAngkaKreditId($paths)->object(),
+            Simpeg::deleteKinerjaperiodikDelete($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -34,7 +34,7 @@ class GetPnsRwKinerjaperiodikCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsRwJabatan($paths)->object(),
+            Simpeg::getPnsRwKinerjaperiodik($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

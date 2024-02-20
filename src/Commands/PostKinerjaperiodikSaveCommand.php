@@ -41,7 +41,7 @@ class PostKinerjaperiodikSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Simpeg::postAngkaKreditSave([], $query)->object(),
+            Simpeg::postKinerjaperiodikSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 
