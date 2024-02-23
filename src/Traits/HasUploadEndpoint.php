@@ -16,7 +16,7 @@ trait HasUploadEndpoint
         return $this->get($urlParsed, $query);
     }
 
-    public function downloadDownloadDok(array $paths = [], array $query = [], string $disk = 'local', ?string $filename = null): string
+    public function downloadDownloadDok(array $paths = [], array $query = [], string $disk = 'local', string $filename = null): string
     {
         $filePath = $query['filePath'];
         $filename = $filename ?? "siasn-simpeg/{$filePath}";
