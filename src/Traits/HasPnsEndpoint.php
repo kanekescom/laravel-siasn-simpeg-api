@@ -56,7 +56,7 @@ trait HasPnsEndpoint
         return $this->get($urlParsed, $query);
     }
 
-    public function downloadPnsPhoto(array $paths = [], array $query = [], string $disk = 'local', string $filename = null): string
+    public function downloadPnsPhoto(array $paths = [], array $query = [], string $disk = 'local', ?string $filename = null): string
     {
         $idPns = $paths['idPns'];
         $filename = $filename ?? "siasn-simpeg/pns/photo/{$idPns}.jpg";
