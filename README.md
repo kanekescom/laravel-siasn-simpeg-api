@@ -31,6 +31,12 @@ You can publish the config file with:
 php artisan vendor:publish --tag="siasn-simpeg-api-config"
 ```
 
+Or, all installations can be completed with the install command:
+
+```bash
+php artisan siasn-simpeg-api:install
+```
+
 ## Usage
 
 Send DELETE request to /angkakredit/delete/{idRiwayatAngkaKredit} endpoint
