@@ -69,7 +69,19 @@ class SimpegServiceProvider extends PackageServiceProvider
                 Commands\PostSkpSaveCommand::class,
                 Commands\GetSkp22IdCommand::class,
                 Commands\PostSkp22SaveCommand::class,
-            ]);
+            ])
+            ->hasInstallCommand(function ($command) {
+                $command
+                    ->startWith(function ($command) {
+                        $command->info('Hello, and welcome to my great laravel package!');
+                    })
+                    ->publishConfigFile()
+                    ->askToRunMigrations()
+                    ->askToStarRepoOnGitHub('kanekescom/laravel-siasn-simpeg-api')
+                    ->endWith(function ($command) {
+                        $command->info('Have a great day!');
+                    });
+            });
     }
 
     public function packageRegistered(): void
