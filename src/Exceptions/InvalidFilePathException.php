@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Exceptions;
+namespace Kanekescom\Siasn\Simpeg\Api\Exceptions;
 
 use Exception;
 

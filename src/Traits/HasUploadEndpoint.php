@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Traits;
+namespace Kanekescom\Siasn\Simpeg\Api\Traits;
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Storage;
-use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
+use Kanekescom\Siasn\Simpeg\Api\Helpers\UrlParser;
 
 trait HasUploadEndpoint
 {
@@ -16,7 +16,7 @@ trait HasUploadEndpoint
         return $this->get($urlParsed, $query);
     }
 
-    public function downloadDownloadDok(array $paths = [], array $query = [], string $disk = 'local', ?string $filename = null): string
+    public function downloadDownloadDok(array $paths = [], array $query = [], string $disk = 'local', string $filename = null): string
     {
         $filePath = $query['filePath'];
         $filename = $filename ?? "siasn-simpeg/{$filePath}";

@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get pengadaan list pengadaan instansi', function () {
     $tahun = config('siasn-simpeg-api.params_test.get_pengadaan_list_pengadaan_instansi_tahun');

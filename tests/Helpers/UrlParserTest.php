@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
+use Kanekescom\Siasn\Simpeg\Api\Helpers\UrlParser;
 
 it('can parse url', function () {
     $nipBaru = config('siasn-simpeg-api.params_test.nip_baru');

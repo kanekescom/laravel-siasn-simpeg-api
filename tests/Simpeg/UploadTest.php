@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\File;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get download dok', function () {
     $query = ['filePath' => config('siasn-simpeg-api.params_test.get_download_dok_filepath')];

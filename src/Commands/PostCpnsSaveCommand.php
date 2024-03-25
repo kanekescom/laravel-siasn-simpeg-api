@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 class PostCpnsSaveCommand extends Command
 {

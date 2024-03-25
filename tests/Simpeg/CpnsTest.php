@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 // it('can post cpns save', function () {
 //     $query = json_decode(config('siasn-simpeg-api.params_test.post_cpns_save_query'), true);

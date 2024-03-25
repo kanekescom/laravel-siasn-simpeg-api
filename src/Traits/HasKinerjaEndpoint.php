@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Traits;
+namespace Kanekescom\Siasn\Simpeg\Api\Traits;
 
 use Illuminate\Http\Client\Response;
-use Kanekescom\Siasn\Api\Simpeg\Helpers\UrlParser;
+use Kanekescom\Siasn\Simpeg\Api\Helpers\UrlParser;
 
 trait HasKinerjaEndpoint
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\File;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get pns data anak', function () {
     $nipBaru = config('siasn-simpeg-api.params_test.get_pns_data_anak_nipbaru');

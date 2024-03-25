@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get penghargaan id', function () {
     $id = config('siasn-simpeg-api.params_test.get_penghargaan_id');

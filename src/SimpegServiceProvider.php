@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg;
+namespace Kanekescom\Siasn\Simpeg\Api;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

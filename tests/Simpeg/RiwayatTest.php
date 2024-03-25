@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get rw angkakredit', function () {
     $nipBaru = config('siasn-simpeg-api.params_test.get_pns_rw_angkakredit_nipbaru');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Helpers;
+namespace Kanekescom\Siasn\Simpeg\Api\Helpers;
 
 class UrlParser
 {

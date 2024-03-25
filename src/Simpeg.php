@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg;
+namespace Kanekescom\Siasn\Simpeg\Api;
 
 use Kanekescom\Helperia\Support\ClassExtender;
 use Kanekescom\Siasn\Api\Facades\Siasn;

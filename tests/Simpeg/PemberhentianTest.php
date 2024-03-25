@@ -1,6 +1,6 @@
 <?php
 
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 it('can get pns list pensiun instansi', function () {
     $tglAwal = config('siasn-simpeg-api.params_test.get_pns_list_pensiun_instansi_tglawal');

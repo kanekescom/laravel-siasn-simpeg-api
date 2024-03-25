@@ -1,8 +1,8 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Tests;
+namespace Kanekescom\Siasn\Simpeg\Api\Tests;
 
-use Kanekescom\Siasn\Api\Simpeg\SimpegServiceProvider;
+use Kanekescom\Siasn\Simpeg\Api\SimpegServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

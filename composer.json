@@ -1,6 +1,6 @@
 {
     "name": "kanekescom/laravel-siasn-simpeg-api",
-    "description": "SIASN Simpeg REST API Client for Laravel",
+    "description": "SIASN SIMPEG REST API Client for Laravel",
     "keywords": [
         "kanekescom",
         "laravel",
@@ -25,7 +25,7 @@
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.14.0",
         "guzzlehttp/guzzle": "^7.2",
-        "illuminate/contracts": "^10.0",
+        "illuminate/contracts": "^10.0|^11.0",
         "kanekescom/laravel-helperia": "^2.0",
         "kanekescom/laravel-siasn-api": "^2.0"
     },
@@ -44,12 +44,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kanekescom\\Siasn\\Api\\Simpeg\\": "src/"
+            "Kanekescom\\Siasn\\Simpeg\\Api\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kanekescom\\Siasn\\Api\\Simpeg\\Tests\\": "tests/",
+            "Kanekescom\\Siasn\\Simpeg\\Api\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -81,10 +81,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kanekescom\\Siasn\\Api\\Simpeg\\SimpegServiceProvider"
+                "Kanekescom\\Siasn\\Simpeg\\Api\\SimpegServiceProvider"
             ],
             "aliases": {
-                "Simpeg": "Kanekescom\\Siasn\\Api\\Simpeg\\Facades\\Simpeg"
+                "SimpegApi": "Kanekescom\\Siasn\\Simpeg\\Api\\Facades\\Simpeg"
             }
         },
         "branch-alias": {

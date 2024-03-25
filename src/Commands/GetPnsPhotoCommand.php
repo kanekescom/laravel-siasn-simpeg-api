@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
 
 class GetPnsPhotoCommand extends Command
 {
