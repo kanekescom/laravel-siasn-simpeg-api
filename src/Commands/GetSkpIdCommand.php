@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp;
 
 class GetSkpIdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetSkpIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getSkpId($paths)->object(),
+            Skp::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

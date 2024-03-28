@@ -1,11 +1,11 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidFilePathException;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidFilePathException;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Upload;
 
 class GetDownloadDokCommand extends Command
 {
@@ -37,7 +37,7 @@ class GetDownloadDokCommand extends Command
             return self::FAILURE;
         }
 
-        $response = Simpeg::getDownloadDok([], $query);
+        $response = Upload::getDok([], $query);
         $content = $response->getBody()->getContents();
 
         if ($content == null) {
@@ -46,7 +46,7 @@ class GetDownloadDokCommand extends Command
             return self::FAILURE;
         }
 
-        $filename = 'siasn-simpeg/'.$query['filePath'];
+        $filename = 'siasn/simpeg/'.$query['filePath'];
 
         Storage::disk('local')->put($filename, $content);
 

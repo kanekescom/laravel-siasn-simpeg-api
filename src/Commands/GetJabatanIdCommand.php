@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Jabatan;
 
 class GetJabatanIdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetJabatanIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getJabatanId($paths)->object(),
+            Jabatan::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kp;
 
 class GetPnsListKpInstansiCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsListKpInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-list-kp-instansi
-                            {periode : Periode}';
+                            {periode : periode}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsListKpInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsListKpInstansi([], $query)->object(),
+            Kp::getListInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

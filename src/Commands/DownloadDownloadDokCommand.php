@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidFilePathException;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidFilePathException;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Upload;
 
 class DownloadDownloadDokCommand extends Command
 {
@@ -36,7 +36,7 @@ class DownloadDownloadDokCommand extends Command
             return self::FAILURE;
         }
 
-        $filepath = Simpeg::downloadDownloadDok([], $query);
+        $filepath = Upload::downloadDok([], $query);
 
         $this->components->info("Downloaded to {$filepath}");
 

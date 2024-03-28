@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pns;
 
 class GetPnsPhotoCommand extends Command
 {
@@ -14,7 +14,7 @@ class GetPnsPhotoCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-photo
-                            {idPns : Id Pns}';
+                            {idPns : idPns}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsPhotoCommand extends Command
             'idPns' => $idPns,
         ];
 
-        $response = Simpeg::getPnsPhoto($paths);
+        $response = Pns::getPhoto($paths);
         $content = $response->getBody()->getContents();
 
         if ($content == null) {
@@ -43,7 +43,7 @@ class GetPnsPhotoCommand extends Command
             return self::FAILURE;
         }
 
-        $filename = "siasn-simpeg/pns/photo/{$idPns}.jpg";
+        $filename = "siasn/simpeg/pns/photo/{$idPns}.jpg";
 
         Storage::disk('local')->put($filename, $content);
 

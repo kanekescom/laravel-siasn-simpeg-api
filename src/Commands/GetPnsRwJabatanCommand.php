@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Riwayat;
 
 class GetPnsRwJabatanCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsRwJabatanCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-rw-jabatan
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsRwJabatanCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsRwJabatan($paths)->object(),
+            Riwayat::getJabatan($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

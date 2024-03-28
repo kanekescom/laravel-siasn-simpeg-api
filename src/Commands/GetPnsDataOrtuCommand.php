@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pns;
 
 class GetPnsDataOrtuCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsDataOrtuCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-data-ortu
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsDataOrtuCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsDataOrtu($paths)->object(),
+            Pns::getDataOrtu($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

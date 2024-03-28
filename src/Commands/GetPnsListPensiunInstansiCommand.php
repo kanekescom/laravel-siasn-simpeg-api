@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pemberhentian;
 
 class GetPnsListPensiunInstansiCommand extends Command
 {
@@ -13,8 +13,8 @@ class GetPnsListPensiunInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-list-pensiun-instansi
-                            {tglAwal : Tanggal awal}
-                            {tglAkhir : Tanggal akhir}';
+                            {tglAwal : tglAwal}
+                            {tglAkhir : tglAkhir}';
 
     /**
      * The console command description.
@@ -37,7 +37,7 @@ class GetPnsListPensiunInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsListPensiunInstansi([], $query)->object(),
+            Pemberhentian::getListPensiunInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

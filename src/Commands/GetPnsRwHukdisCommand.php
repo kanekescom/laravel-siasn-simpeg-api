@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Riwayat;
 
 class GetPnsRwHukdisCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsRwHukdisCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-rw-hukdis
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsRwHukdisCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsRwHukdis($paths)->object(),
+            Riwayat::getHukdis($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

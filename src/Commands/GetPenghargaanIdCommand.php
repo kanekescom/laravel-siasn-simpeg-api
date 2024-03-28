@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Penghargaan;
 
 class GetPenghargaanIdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetPenghargaanIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPenghargaanId($paths)->object(),
+            Penghargaan::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

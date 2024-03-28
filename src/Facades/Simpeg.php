@@ -1,16 +1,16 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Facades;
+namespace Kanekescom\Siasn\Simpeg\Api\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Kanekescom\Siasn\Api\Simpeg\Simpeg
+ * @see \Kanekescom\Siasn\Simpeg\Api\Simpeg
  */
 class Simpeg extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Kanekescom\Siasn\Api\Simpeg\Simpeg::class;
+        return \Kanekescom\Siasn\Simpeg\Api\Simpeg::class;
     }
 }

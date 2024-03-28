@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pns;
 
 class DownloadPnsPhotoCommand extends Command
 {
@@ -33,7 +33,7 @@ class DownloadPnsPhotoCommand extends Command
             'idPns' => $idPns,
         ];
 
-        $filepath = Simpeg::downloadPnsPhoto($paths);
+        $filepath = Pns::downloadPhoto($paths);
 
         $this->components->info("Downloaded to {$filepath}");
 

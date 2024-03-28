@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Simpeg\Commands;
+namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Api\Simpeg\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Api\Simpeg\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp22;
 
 class PostSkp22SaveCommand extends Command
 {
@@ -41,7 +41,7 @@ class PostSkp22SaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Simpeg::postSkp22Save([], $query)->object(),
+            Skp22::postSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 
