@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kinerja;
 
 class PostKinerjaperiodikSaveCommand extends Command
 {
@@ -41,7 +41,7 @@ class PostKinerjaperiodikSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Simpeg::postKinerjaperiodikSave([], $query)->object(),
+            Kinerja::postSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

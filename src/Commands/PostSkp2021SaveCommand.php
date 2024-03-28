@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp;
 
 class PostSkp2021SaveCommand extends Command
 {
@@ -41,7 +41,7 @@ class PostSkp2021SaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Simpeg::postSkp2021Save([], $query)->object(),
+            Skp::post2021Save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

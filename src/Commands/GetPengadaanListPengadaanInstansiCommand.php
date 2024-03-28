@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pengadaan;
 
 class GetPengadaanListPengadaanInstansiCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPengadaanListPengadaanInstansiCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pengadaan-list-pengadaan-instansi
-                            {tahun : Tahun}';
+                            {tahun : tahun}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPengadaanListPengadaanInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPengadaanListPengadaanInstansi([], $query)->object(),
+            Pengadaan::getListInstansi([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

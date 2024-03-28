@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\AngkaKredit;
 
 class GetAngkakreditIdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetAngkakreditIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getAngkakreditId($paths)->object(),
+            AngkaKredit::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

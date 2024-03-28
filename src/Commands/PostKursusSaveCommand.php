@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kursus;
 
 class PostKursusSaveCommand extends Command
 {
@@ -41,7 +41,7 @@ class PostKursusSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Simpeg::postKursusSave([], $query)->object(),
+            Kursus::postSave([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

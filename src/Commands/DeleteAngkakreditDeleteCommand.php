@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\AngkaKredit;
 
 class DeleteAngkakreditDeleteCommand extends Command
 {
@@ -34,7 +34,7 @@ class DeleteAngkakreditDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getAngkaKreditId($paths)->object(),
+            AngkaKredit::deleteId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

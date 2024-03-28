@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kinerja;
 
 class DeleteKinerjaperiodikDeleteCommand extends Command
 {
@@ -34,7 +34,7 @@ class DeleteKinerjaperiodikDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::deleteKinerjaperiodikDelete($paths)->object(),
+            Kinerja::deleteId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

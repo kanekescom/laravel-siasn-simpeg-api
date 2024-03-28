@@ -36,6 +36,7 @@
         </include>
     </source>
     <php>
+        <!-- SIASN -->
         <env name="SIASN_MODE" value="training"/>
         <env name="SIASN_DEBUG" value="false"/>
         <env name="SIASN_APIM_USERNAME" value=""/>
@@ -45,27 +46,55 @@
         <env name="SIASN_SSO_PASSWORD" value=""/>
         <env name="SIASN_CONST_INSTANSI_ID" value=""/>
         <env name="SIASN_CONST_SATUAN_KERJA_ID" value=""/>
-
         <env name="SIASN_PARAMS_TEST_NIPBARU" value=""/>
 
+        <!-- AngkaKredit -->
         <env name="SIASN_PARAMS_TEST_GET_ANGKAKREDIT_ID" value=""/>
+
+        <!-- CPNS -->
+
+        <!-- Diklat -->
         <env name="SIASN_PARAMS_TEST_GET_DIKLAT_ID" value=""/>
-        <env name="SIASN_PARAMS_TEST_GET_DOWNLOAD_DOK_FILEPATH" value=''/>
-        <env name="SIASN_PARAMS_TEST_DOWNLOAD_DOWNLOAD_DOK_FILEPATH" value=''/>
+
+        <!-- Upload -->
+        <env name="SIASN_PARAMS_TEST_GET_DOWNLOAD_DOK_FILEPATH" value=""/>
+        <env name="SIASN_PARAMS_TEST_DOWNLOAD_DOWNLOAD_DOK_FILEPATH" value=""/>
+
+        <!-- Hukdis -->
         <env name="SIASN_PARAMS_TEST_GET_HUKDIS_ID" value=""/>
+
+        <!-- Jabatan -->
         <env name="SIASN_PARAMS_TEST_GET_JABATAN_ID" value=""/>
+        <env name="SIASN_PARAMS_TEST_GET_JABATAN_NIPBARU" value=""/>
+
+        <!-- Kinerja -->
+        <env name="SIASN_PARAMS_TEST_GET_KINERJAPERIODDIK_ID" value=""/>
+
+        <!-- Kursus -->
         <env name="SIASN_PARAMS_TEST_GET_KURSUS_ID" value=""/>
+
+        <!-- Pengadaan -->
         <env name="SIASN_PARAMS_TEST_GET_PENGADAAN_LIST_PENGADAAN_INSTANSI_TAHUN" value=""/>
+
+        <!-- Penghargaan -->
         <env name="SIASN_PARAMS_TEST_GET_PENGHARGAAN_ID" value=""/>
+
+        <!-- PNS -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_DATA_ANAK_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_DATA_ORTU_BARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_DATA_PASANGAN_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_DATA_UTAMA_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_PHOTO_IDPNS" value=""/>
         <env name="SIASN_PARAMS_TEST_DOWNLOAD_PNS_PHOTO_IDPNS" value=""/>
+
+        <!-- KP -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_KP_INSTANSI_PERIODE" value=""/>
+
+        <!-- Pemberhetntian -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_PENSIUN_INSTANSI_TGLAWAL" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_PENSIUN_INSTANSI_TGLAKHIR" value=""/>
+
+        <!-- Riwayat -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_ANGKAKREDIT_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_CLTN_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_DIKLAT_NIPBARU" value=""/>
@@ -84,7 +113,14 @@
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_PWK_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_SKP_NIPBARU" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_RW_SKP22_NIPBARU" value=""/>
+
+        <!-- Referensi -->
+        <env name="SIASN_PARAMS_TEST_GET_REFERENSI_REF_UNOR" value=""/>
+
+        <!-- Skp -->
         <env name="SIASN_PARAMS_TEST_GET_SKP_ID" value=""/>
+
+        <!-- Skp22 -->
         <env name="SIASN_PARAMS_TEST_GET_SKP22_ID" value=""/>
     </php>
 </phpunit>

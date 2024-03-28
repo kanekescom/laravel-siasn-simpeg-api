@@ -13,7 +13,7 @@ class GetPnsRwAngkakreditCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-rw-angkakredit
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsRwAngkakreditCommand extends Command
         ];
 
         $this->info(json_encode(
-            Riwayat::angkakredit($paths)->object(),
+            Riwayat::getAngkakredit($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

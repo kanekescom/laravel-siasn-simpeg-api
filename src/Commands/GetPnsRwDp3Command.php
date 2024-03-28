@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Riwayat;
 
 class GetPnsRwDp3Command extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsRwDp3Command extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-rw-dp3
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsRwDp3Command extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsRwDp3($paths)->object(),
+            Riwayat::getDp3($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

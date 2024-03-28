@@ -13,28 +13,52 @@ class SimpegServiceProvider extends PackageServiceProvider
             ->name('laravel-siasn-simpeg-api')
             ->hasConfigFile()
             ->hasCommands([
+                // AngkaKredit
                 Commands\DeleteAngkakreditDeleteCommand::class,
                 Commands\GetAngkakreditIdCommand::class,
                 Commands\PostAngkakreditSaveCommand::class,
+
+                // CPNS
                 Commands\PostCpnsSaveCommand::class,
+
+                // Diklat
                 Commands\GetDiklatIdCommand::class,
                 Commands\PostDiklatSaveCommand::class,
+
+                // Upload
                 Commands\GetDownloadDokCommand::class,
                 Commands\DownloadDownloadDokCommand::class,
                 Commands\PostUploadDokCommand::class,
                 Commands\PostUploadDokRwCommand::class,
+
+                // Hukdis
                 Commands\GetHukdisIdCommand::class,
                 Commands\PostHukdisSaveCommand::class,
+
+                // Jabatan
                 Commands\GetJabatanIdCommand::class,
                 Commands\GetJabatanPnsCommand::class,
+                Commands\PostJabatanUnorjabatanSaveCommand::class,
                 Commands\PostJabatanSaveCommand::class,
+
+                // Kinerja
                 Commands\DeleteKinerjaperiodikDeleteCommand::class,
                 Commands\PostKinerjaperiodikSaveCommand::class,
+
+                // Kursus
+                Commands\DeleteKursusDeleteCommand::class,
                 Commands\GetKursusIdCommand::class,
                 Commands\PostKursusSaveCommand::class,
+
+                // Pengadaan
                 Commands\GetPengadaanListPengadaanInstansiCommand::class,
+
+                // Penghargaan
                 Commands\GetPenghargaanIdCommand::class,
+                Commands\DeletePenghargaanDeleteCommand::class,
                 Commands\PostPenghargaanSaveCommand::class,
+
+                // PNS
                 Commands\GetPnsDataAnakCommand::class,
                 Commands\GetPnsDataOrtuCommand::class,
                 Commands\GetPnsDataPasanganCommand::class,
@@ -42,9 +66,15 @@ class SimpegServiceProvider extends PackageServiceProvider
                 Commands\GetPnsDataUtamaCommand::class,
                 Commands\GetPnsPhotoCommand::class,
                 Commands\DownloadPnsPhotoCommand::class,
+
+                // Kp
                 Commands\GetPnsListKpInstansiCommand::class,
                 Commands\PostUploadDokSkKpCommand::class,
+
+                // Pemberhentian
                 Commands\GetPnsListPensiunInstansiCommand::class,
+
+                // Riwayat
                 Commands\GetPnsRwAngkakreditCommand::class,
                 Commands\GetPnsRwCltnCommand::class,
                 Commands\GetPnsRwDiklatCommand::class,
@@ -63,10 +93,16 @@ class SimpegServiceProvider extends PackageServiceProvider
                 Commands\GetPnsRwPwkCommand::class,
                 Commands\GetPnsRwSkpCommand::class,
                 Commands\GetPnsRwSkp22Command::class,
+
+                // Referensi
                 Commands\GetReferensiRefUnorCommand::class,
+
+                // Skp
                 Commands\PostSkp2021SaveCommand::class,
                 Commands\GetSkpIdCommand::class,
                 Commands\PostSkpSaveCommand::class,
+
+                // Skp 2022
                 Commands\GetSkp22IdCommand::class,
                 Commands\PostSkp22SaveCommand::class,
             ])

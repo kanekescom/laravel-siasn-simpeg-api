@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Hukdis;
 
 class GetHukdisIdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetHukdisIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getHukdisId($paths)->object(),
+            Hukdis::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp22;
 
 class GetSkp22IdCommand extends Command
 {
@@ -34,7 +34,7 @@ class GetSkp22IdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getSkp22Id($paths)->object(),
+            Skp22::getId($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

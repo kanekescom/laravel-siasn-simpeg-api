@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Facades\Simpeg;
+use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pns;
 
 class GetPnsDataPasanganCommand extends Command
 {
@@ -13,7 +13,7 @@ class GetPnsDataPasanganCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-simpeg:get-pns-data-pasangan
-                            {nipBaru : NIP Baru}';
+                            {nipBaru : nipBaru}';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class GetPnsDataPasanganCommand extends Command
         ];
 
         $this->info(json_encode(
-            Simpeg::getPnsDataPasangan($paths)->object(),
+            Pns::getDataPasangan($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 
