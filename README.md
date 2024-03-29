@@ -1342,7 +1342,7 @@ Get Referensi from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Referensi;
 
-Referensi::getRefUnor();
+Referensi::getUnor();
 ```
 </details>
 
