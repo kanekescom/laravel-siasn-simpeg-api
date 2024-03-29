@@ -10,7 +10,7 @@ it('can get hukdis id', function () {
     $paths = [
         'idRiwayatHukdis' => $id,
     ];
-    $response = Hukdis::getId($paths);
+    $response = Hukdis::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

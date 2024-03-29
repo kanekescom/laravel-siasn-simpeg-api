@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Penghargaan
 {
-    public static function getId(array $paths = [], array $query = []): Response
+    public static function get(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/penghargaan/id/{idRiwayatPenghargaan}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
@@ -16,7 +16,7 @@ class Penghargaan
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function deleteId(array $paths = [], array $query = []): Response
+    public static function delete(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/angkakredit/delete/{idRiwayatPenghargaan}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

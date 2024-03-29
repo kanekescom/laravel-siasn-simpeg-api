@@ -10,7 +10,7 @@ it('can get skp id', function () {
     $paths = [
         'idRiwayatSkp' => $id,
     ];
-    $response = Skp::getId($paths);
+    $response = Skp::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

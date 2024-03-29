@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Jabatan
 {
-    public static function getId(array $paths = [], array $query = []): Response
+    public static function get(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/id/{idRiwayatJabatan}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

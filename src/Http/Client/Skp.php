@@ -16,7 +16,7 @@ class Skp
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function getId(array $paths = [], array $query = []): Response
+    public static function get(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/skp/id/{idRiwayatSkp}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

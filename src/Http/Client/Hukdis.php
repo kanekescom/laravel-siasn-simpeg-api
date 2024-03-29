@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Hukdis
 {
-    public static function getId(array $paths = [], array $query = []): Response
+    public static function get(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/hukdis/id/{idRiwayatHukdis}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

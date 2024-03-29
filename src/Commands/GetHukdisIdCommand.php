@@ -34,7 +34,7 @@ class GetHukdisIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Hukdis::getId($paths)->object(),
+            Hukdis::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

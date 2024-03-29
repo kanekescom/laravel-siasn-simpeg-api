@@ -10,7 +10,7 @@ it('can get jabatan id', function () {
     $paths = [
         'idRiwayatJabatan' => $id,
     ];
-    $response = Jabatan::getId($paths);
+    $response = Jabatan::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

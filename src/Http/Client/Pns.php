@@ -57,7 +57,7 @@ class Pns
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function downloadPhoto(array $paths = [], array $query = [], string $disk = 'local', ?string $filename = null): string
+    public static function downloadPhoto(array $paths = [], array $query = [], string $disk = 'local', string $filename = null): string
     {
         $idPns = $paths['idPns'];
         $filename = $filename ?? "siasn/simpeg/pns/photo/{$idPns}.jpg";

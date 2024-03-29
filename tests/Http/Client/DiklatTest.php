@@ -10,7 +10,7 @@ it('can get diklat id', function () {
     $paths = [
         'idRiwayatDiklat' => $id,
     ];
-    $response = Diklat::getId($paths);
+    $response = Diklat::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

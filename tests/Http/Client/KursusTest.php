@@ -10,7 +10,7 @@ it('can get kursus id', function () {
     $paths = [
         'idRiwayatKursus' => $id,
     ];
-    $response = Kursus::getId($paths);
+    $response = Kursus::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

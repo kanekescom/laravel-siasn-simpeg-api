@@ -10,7 +10,7 @@ it('can get penghargaan id', function () {
     $paths = [
         'idRiwayatPenghargaan' => $id,
     ];
-    $response = Penghargaan::getId($paths);
+    $response = Penghargaan::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

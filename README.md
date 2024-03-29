@@ -426,7 +426,7 @@ $pathParams = [
     'idRiwayatAngkaKredit' => 'string',
 ];
 
-AngkaKredit::deleteId($pathParams);
+AngkaKredit::delete($pathParams);
 ```
 
 Get Angka Kredit from SIASN
@@ -438,7 +438,7 @@ $pathParams = [
     'idRiwayatAngkaKredit' => 'string',
 ];
 
-AngkaKredit::getId($pathParams);
+AngkaKredit::get($pathParams);
 ```
 
 Add Angka Kredit to SIASN
@@ -530,7 +530,7 @@ $pathParams = [
     'idRiwayatDiklat' => 'string',
 ];
 
-Diklat::getId($pathParams);
+Diklat::get($pathParams);
 ```
 
 Add Diklat to SIASN
@@ -633,7 +633,7 @@ $pathParams = [
     'idRiwayatHukdis' => 'string',
 ];
 
-Hukdis::getId($pathParams);
+Hukdis::get($pathParams);
 ```
 
 Add Hukdis to SIASN
@@ -688,7 +688,7 @@ $pathParams = [
     'idRiwayatJabatan' => 'string',
 ];
 
-Jabatan::getId($pathParams);
+Jabatan::get($pathParams);
 ```
 
 Get Jabatan by nipBaru from SIASN
@@ -786,7 +786,7 @@ $pathParams = [
     'idRiwayatKinerjaPeriodik' => 'string',
 ];
 
-Kinerja::getId($pathParams);
+Kinerja::get($pathParams);
 ```
 
 Add Kinerja to SIASN
@@ -840,7 +840,7 @@ $pathParams = [
     'idRiwayatKursus' => 'string',
 ];
 
-Kursus::deleteId($pathParams);
+Kursus::delete($pathParams);
 ```
 
 Get Kursus from SIASN
@@ -852,7 +852,7 @@ $pathParams = [
     'idRiwayatKursus' => 'string',
 ];
 
-Kursus::getId($pathParams);
+Kursus::get($pathParams);
 ```
 
 Add Kursus to SIASN
@@ -918,7 +918,7 @@ $pathParams = [
     'idRiwayatPenghargaan' => 'string',
 ];
 
-Penghargaan::deleteId($pathParams);
+Penghargaan::delete($pathParams);
 ```
 
 Get Penghargaan from SIASN
@@ -930,7 +930,7 @@ $pathParams = [
     'idRiwayatPenghargaan' => 'string',
 ];
 
-Penghargaan::getId($pathParams);
+Penghargaan::get($pathParams);
 ```
 
 Add Penghargaan to SIASN
@@ -1404,7 +1404,7 @@ $pathParams = [
     'idRiwayatSkp' => 'string',
 ];
 
-Skp::getId($pathParams);
+Skp::get($pathParams);
 ```
 
 Add SKP to SIASN
@@ -1463,7 +1463,7 @@ $pathParams = [
     'idRiwayatSkp' => 'string',
 ];
 
-Skp22::getId($pathParams);
+Skp22::get($pathParams);
 ```
 
 Add SKP 2022 to SIASN

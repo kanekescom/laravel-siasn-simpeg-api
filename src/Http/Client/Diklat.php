@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Diklat
 {
-    public static function getId(array $paths = [], array $query = []): Response
+    public static function get(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/diklat/id/{idRiwayatDiklat}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

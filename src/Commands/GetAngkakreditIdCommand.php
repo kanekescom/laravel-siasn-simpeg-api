@@ -34,7 +34,7 @@ class GetAngkakreditIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            AngkaKredit::getId($paths)->object(),
+            AngkaKredit::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

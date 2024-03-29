@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Kinerja
 {
-    public static function deleteId(array $paths = [], array $query = []): Response
+    public static function delete(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/kinerjaperiodik/delete/{idRiwayatKinerjaPeriodik}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

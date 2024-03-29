@@ -10,7 +10,7 @@ it('can get angkakredit id', function () {
     $paths = [
         'idRiwayatAngkaKredit' => $id,
     ];
-    $response = AngkaKredit::getId($paths);
+    $response = AngkaKredit::get($paths);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

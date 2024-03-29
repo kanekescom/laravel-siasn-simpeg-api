@@ -34,7 +34,7 @@ class GetDiklatIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Diklat::getId($paths)->object(),
+            Diklat::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 
