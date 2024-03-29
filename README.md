@@ -898,11 +898,11 @@ Get Pengadaan from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pengadaan;
 
-$pathParams = [
+$queryParams = [
     'tahun' => 'string',
 ];
 
-Pengadaan::getList($pathParams);
+Pengadaan::getList([], $queryParams);
 ```
 </details>
 
