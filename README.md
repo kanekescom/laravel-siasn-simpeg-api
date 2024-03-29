@@ -1075,7 +1075,7 @@ Get Kenaikan Pangkat from SIASN
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kp;
 
 $pathParams = [
-    'periode' => 'string',
+    'periode' => 'string', // yyyy-mm-dd
 ];
 
 Kp::getList($pathParams);
@@ -1106,8 +1106,8 @@ Get Pemberhentian from SIASN
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pemberhentian;
 
 $pathParams = [
-    'tglAwal' => 'string',
-    'tglAkhir' => 'string',
+    'tglAwal' => 'string', // dd-mm-yyyy
+    'tglAkhir' => 'string', // dd-mm-yyyy
 ];
 
 Pemberhentian::getPensiunList($pathParams);
