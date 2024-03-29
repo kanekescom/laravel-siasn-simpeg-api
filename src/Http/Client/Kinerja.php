@@ -8,15 +8,21 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Kinerja
 {
-    public static function deleteId(array $paths = [], array $query = []): Response
+    public static function delete(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'idRiwayatKinerjaPeriodik' => $paths,
+            ];
+        }
+
         $urlFormat = '/kinerjaperiodik/delete/{idRiwayatKinerjaPeriodik}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
         return (new Simpeg)->delete($urlParsed, $query);
     }
 
-    public static function postSave(array $paths = [], array $query = []): Response
+    public static function save(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/kinerjaperiodik/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

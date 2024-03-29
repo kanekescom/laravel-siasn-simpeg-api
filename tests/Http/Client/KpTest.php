@@ -10,7 +10,7 @@ it('can get pns list kp instansi', function () {
     $query = [
         'periode' => $periode,
     ];
-    $response = Kp::getListInstansi([], $query);
+    $response = Kp::getList([], $query);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

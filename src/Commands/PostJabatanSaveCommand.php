@@ -41,7 +41,7 @@ class PostJabatanSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Jabatan::postSave([], $query)->object(),
+            Jabatan::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -41,7 +41,7 @@ class PostDiklatSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Diklat::postSave([], $query)->object(),
+            Diklat::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

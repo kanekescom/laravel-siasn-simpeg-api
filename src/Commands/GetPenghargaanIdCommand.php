@@ -34,7 +34,7 @@ class GetPenghargaanIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Penghargaan::getId($paths)->object(),
+            Penghargaan::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

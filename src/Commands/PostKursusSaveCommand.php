@@ -41,7 +41,7 @@ class PostKursusSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Kursus::postSave([], $query)->object(),
+            Kursus::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

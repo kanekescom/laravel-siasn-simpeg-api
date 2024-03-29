@@ -426,7 +426,10 @@ $pathParams = [
     'idRiwayatAngkaKredit' => 'string',
 ];
 
-AngkaKredit::deleteId($pathParams);
+AngkaKredit::delete($pathParams);
+
+// Or directly
+AngkaKredit::delete('{idRiwayatAngkaKredit}');
 ```
 
 Get Angka Kredit from SIASN
@@ -438,7 +441,10 @@ $pathParams = [
     'idRiwayatAngkaKredit' => 'string',
 ];
 
-AngkaKredit::getId($pathParams);
+AngkaKredit::get($pathParams);
+
+// Or directly
+AngkaKredit::get('{idRiwayatAngkaKredit}');
 ```
 
 Add Angka Kredit to SIASN
@@ -473,7 +479,7 @@ $queryParams = [
   'tanggalSk' => 'string',
 ];
 
-AngkaKredit::postSave([], $queryParams);
+AngkaKredit::save([], $queryParams);
 ```
 </details>
 
@@ -514,7 +520,7 @@ $queryParams = [
   'tmt_pns' => 'string',
 ];
 
-Cpns::postSave([], $queryParams);
+Cpns::save([], $queryParams);
 ```
 </details>
 
@@ -530,7 +536,10 @@ $pathParams = [
     'idRiwayatDiklat' => 'string',
 ];
 
-Diklat::getId($pathParams);
+Diklat::get($pathParams);
+
+// Or directly
+Diklat::get('{idRiwayatDiklat}');
 ```
 
 Add Diklat to SIASN
@@ -561,7 +570,7 @@ $queryParams = [
   'tanggalSelesai' => 'string',
 ];
 
-Diklat::postSave([], $queryParams);
+Diklat::save([], $queryParams);
 ```
 </details>
 
@@ -633,7 +642,10 @@ $pathParams = [
     'idRiwayatHukdis' => 'string',
 ];
 
-Hukdis::getId($pathParams);
+Hukdis::get($pathParams);
+
+// Or directly
+Hukdis::get('{idRiwayatHukdis}');
 ```
 
 Add Hukdis to SIASN
@@ -672,7 +684,7 @@ $queryParams = [
   'skTanggal' => 'string',
 ];
 
-Hukdis::postSave([], $queryParams);
+Hukdis::save([], $queryParams);
 ```
 </details>
 
@@ -688,7 +700,10 @@ $pathParams = [
     'idRiwayatJabatan' => 'string',
 ];
 
-Jabatan::getId($pathParams);
+Jabatan::get($pathParams);
+
+// Or directly
+Jabatan::get('{idRiwayatJabatan}');
 ```
 
 Get Jabatan by nipBaru from SIASN
@@ -701,6 +716,9 @@ $pathParams = [
 ];
 
 Jabatan::getNipBaru($pathParams);
+
+// Or directly
+Jabatan::getNipBaru('{nipBaru}');
 ```
 
 Add Jabatan Unor to SIASN
@@ -737,7 +755,7 @@ $queryParams = [
   'unorId' => 'string',
 ];
 
-Jabatan::postUnorSave([], $queryParams);
+Jabatan::saveUnor([], $queryParams);
 ```
 
 Add Jabatan to SIASN
@@ -770,7 +788,7 @@ $queryParams = [
   'unorId' => 'string',
 ];
 
-Jabatan::postSave([], $queryParams);
+Jabatan::save([], $queryParams);
 ```
 </details>
 
@@ -786,7 +804,10 @@ $pathParams = [
     'idRiwayatKinerjaPeriodik' => 'string',
 ];
 
-Kinerja::getId($pathParams);
+Kinerja::get($pathParams);
+
+// Or directly
+Kinerja::get('{idRiwayatKinerjaPeriodik}');
 ```
 
 Add Kinerja to SIASN
@@ -824,7 +845,7 @@ $queryParams = [
   'tahunSelesaiPenilaian' => 0,
 ];
 
-Kinerja::postSave([], $queryParams);
+Kinerja::save([], $queryParams);
 ```
 </details>
 
@@ -840,7 +861,10 @@ $pathParams = [
     'idRiwayatKursus' => 'string',
 ];
 
-Kursus::deleteId($pathParams);
+Kursus::delete($pathParams);
+
+// Or directly
+Kursus::delete('{idRiwayatKursus}');
 ```
 
 Get Kursus from SIASN
@@ -852,7 +876,10 @@ $pathParams = [
     'idRiwayatKursus' => 'string',
 ];
 
-Kursus::getId($pathParams);
+Kursus::get($pathParams);
+
+// Or directly
+Kursus::get('{idRiwayatKursus}');
 ```
 
 Add Kursus to SIASN
@@ -886,7 +913,7 @@ $queryParams = [
   'tanggalSelesaiKursus' => 'string',
 ];
 
-Kursus::postSave([], $queryParams);
+Kursus::save([], $queryParams);
 ```
 </details>
 
@@ -898,11 +925,11 @@ Get Pengadaan from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pengadaan;
 
-$pathParams = [
+$queryParams = [
     'tahun' => 'string',
 ];
 
-Pengadaan::getListInstansi($pathParams);
+Pengadaan::getList([], $queryParams);
 ```
 </details>
 
@@ -918,7 +945,10 @@ $pathParams = [
     'idRiwayatPenghargaan' => 'string',
 ];
 
-Penghargaan::deleteId($pathParams);
+Penghargaan::delete($pathParams);
+
+// Or directly
+Penghargaan::delete('{idRiwayatPenghargaan}');
 ```
 
 Get Penghargaan from SIASN
@@ -930,7 +960,10 @@ $pathParams = [
     'idRiwayatPenghargaan' => 'string',
 ];
 
-Penghargaan::getId($pathParams);
+Penghargaan::get($pathParams);
+
+// Or directly
+Penghargaan::get('{idRiwayatPenghargaan}');
 ```
 
 Add Penghargaan to SIASN
@@ -956,7 +989,7 @@ $queryParams = [
   'tahun' => 0,
 ];
 
-Penghargaan::postSave([], $queryParams);
+Penghargaan::save([], $queryParams);
 ```
 </details>
 
@@ -973,6 +1006,9 @@ $pathParams = [
 ];
 
 Pns::getDataAnak($pathParams);
+
+// Or directly
+Pns::getDataAnak('{nipBaru}');
 ```
 
 Get PNS Data Orang Tua from SIASN
@@ -985,6 +1021,9 @@ $pathParams = [
 ];
 
 Pns::getDataOrtu($pathParams);
+
+// Or directly
+Pns::getDataOrtu('{nipBaru}');
 ```
 
 Get PNS Data Pasangan from SIASN
@@ -997,6 +1036,9 @@ $pathParams = [
 ];
 
 Pns::getDataPasangan($pathParams);
+
+// Or directly
+Pns::getDataPasangan('{nipBaru}');
 ```
 
 Update Data Utama PNS to SIASN
@@ -1025,7 +1067,7 @@ $queryParams = [
   'taspen_nomor' => 'string',
 ];
 
-Pns::postDataUtamaUpdate([], $queryParams);
+Pns::updateDataUtama([], $queryParams);
 ```
 
 Get PNS Data Utama from SIASN
@@ -1038,6 +1080,9 @@ $pathParams = [
 ];
 
 Pns::getDataUtama($pathParams);
+
+// Or directly
+Pns::getDataUtama('{nipBaru}');
 ```
 
 Get Photo from SIASN
@@ -1050,6 +1095,9 @@ $pathParams = [
 ];
 
 Pns::getPhoto($pathParams);
+
+// Or directly
+Pns::getPhoto('{idPns}');
 ```
 
 Download Photo from SIASN
@@ -1063,6 +1111,9 @@ $pathParams = [
 $filename = 'string';
 
 Pns::downloadPhoto($pathParams, [], $disk = 'local', $filename);
+
+// Or directly
+Pns::downloadPhoto('{idPns}', [], $disk = 'local', $filename);
 ```
 </details>
 
@@ -1074,11 +1125,11 @@ Get Kenaikan Pangkat from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Kp;
 
-$pathParams = [
-    'periode' => 'string',
+$queryParams = [
+    'periode' => 'string', // yyyy-mm-dd
 ];
 
-Kp::getListInstansi($pathParams);
+Kp::getList([], $queryParams);
 ```
 
 Upload Dok SK file to SIASN
@@ -1105,12 +1156,12 @@ Get Pemberhentian from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pemberhentian;
 
-$pathParams = [
-    'tglAwal' => 'string',
-    'tglAkhir' => 'string',
+$queryParams = [
+    'tglAwal' => 'string', // dd-mm-yyyy
+    'tglAkhir' => 'string', // dd-mm-yyyy
 ];
 
-Pemberhentian::getListPensiunInstansi($pathParams);
+Pemberhentian::getPensiunList([], $queryParams);
 ```
 </details>
 
@@ -1127,6 +1178,9 @@ $pathParams = [
 ];
 
 Riwayat::getAngkakredit($pathParams);
+
+// Or directly
+Riwayat::getAngkakredit('{nipBaru}');
 ```
 
 Get Riwayat CLTN from SIASN
@@ -1139,6 +1193,9 @@ $pathParams = [
 ];
 
 Riwayat::getCltn($pathParams);
+
+// Or directly
+Riwayat::getCltn('{nipBaru}');
 ```
 
 Get Riwayat Diklat from SIASN
@@ -1151,6 +1208,9 @@ $pathParams = [
 ];
 
 Riwayat::getDiklat($pathParams);
+
+// Or directly
+Riwayat::getDiklat('{nipBaru}');
 ```
 
 Get Riwayat DP3 from SIASN
@@ -1163,6 +1223,9 @@ $pathParams = [
 ];
 
 Riwayat::getDp3($pathParams);
+
+// Or directly
+Riwayat::getDp3('{nipBaru}');
 ```
 
 Get Riwayat Golongan from SIASN
@@ -1175,6 +1238,9 @@ $pathParams = [
 ];
 
 Riwayat::getGolongan($pathParams);
+
+// Or directly
+Riwayat::getGolongan('{nipBaru}');
 ```
 
 Get Riwayat Hukdis from SIASN
@@ -1187,6 +1253,9 @@ $pathParams = [
 ];
 
 Riwayat::getHukdis($pathParams);
+
+// Or directly
+Riwayat::getHukdis('{nipBaru}');
 ```
 
 Get Riwayat Jabatan from SIASN
@@ -1199,6 +1268,9 @@ $pathParams = [
 ];
 
 Riwayat::getJabatan($pathParams);
+
+// Or directly
+Riwayat::getJabatan('{nipBaru}');
 ```
 
 Get Riwayat Kinerja Periodik from SIASN
@@ -1211,6 +1283,9 @@ $pathParams = [
 ];
 
 Riwayat::getKinerjaperiodik($pathParams);
+
+// Or directly
+Riwayat::getKinerjaperiodik('{nipBaru}');
 ```
 
 Get Riwayat Kursus from SIASN
@@ -1223,6 +1298,9 @@ $pathParams = [
 ];
 
 Riwayat::getKursus($pathParams);
+
+// Or directly
+Riwayat::getKursus('{nipBaru}');
 ```
 
 Get Riwayat Masa Kerja from SIASN
@@ -1235,6 +1313,9 @@ $pathParams = [
 ];
 
 Riwayat::getMasakerja($pathParams);
+
+// Or directly
+Riwayat::getMasakerja('{nipBaru}');
 ```
 
 Get Riwayat Pemberhentian from SIASN
@@ -1247,6 +1328,9 @@ $pathParams = [
 ];
 
 Riwayat::getPemberhentian($pathParams);
+
+// Or directly
+Riwayat::getPemberhentian('{nipBaru}');
 ```
 
 Get Riwayat Pendidikan from SIASN
@@ -1259,6 +1343,9 @@ $pathParams = [
 ];
 
 Riwayat::getPendidikan($pathParams);
+
+// Or directly
+Riwayat::getPendidikan('{nipBaru}');
 ```
 
 Get Riwayat Penghargaan from SIASN
@@ -1271,6 +1358,9 @@ $pathParams = [
 ];
 
 Riwayat::getPenghargaan($pathParams);
+
+// Or directly
+Riwayat::getPenghargaan('{nipBaru}');
 ```
 
 Get Riwayat Pindah Instansi from SIASN
@@ -1283,6 +1373,9 @@ $pathParams = [
 ];
 
 Riwayat::getPindahinstansi($pathParams);
+
+// Or directly
+Riwayat::getPindahinstansi('{nipBaru}');
 ```
 
 Get Riwayat PNS Unor from SIASN
@@ -1295,6 +1388,9 @@ $pathParams = [
 ];
 
 Riwayat::getPnsunor($pathParams);
+
+// Or directly
+Riwayat::getPnsunor('{nipBaru}');
 ```
 
 Get Riwayat PWK from SIASN
@@ -1307,6 +1403,9 @@ $pathParams = [
 ];
 
 Riwayat::getPwk($pathParams);
+
+// Or directly
+Riwayat::getPwk('{nipBaru}');
 ```
 
 Get Riwayat SKP from SIASN
@@ -1319,6 +1418,9 @@ $pathParams = [
 ];
 
 Riwayat::getSkp($pathParams);
+
+// Or directly
+Riwayat::getSkp('{nipBaru}');
 ```
 
 Get Riwayat SKP 2022/Kinerja from SIASN
@@ -1331,6 +1433,9 @@ $pathParams = [
 ];
 
 Riwayat::getSkp22($pathParams);
+
+// Or directly
+Riwayat::getSkp22('{nipBaru}');
 ```
 </details>
 
@@ -1342,7 +1447,7 @@ Get Referensi from SIASN
 ```php
 use Kanekescom\Siasn\Simpeg\Api\Http\Client\Referensi;
 
-Referensi::getRefUnor();
+Referensi::getUnor();
 ```
 </details>
 
@@ -1392,7 +1497,7 @@ $queryParams = [
   'tahun' => 0,
 ];
 
-Skp::post2021Save([], $queryParams);
+Skp::save2021([], $queryParams);
 ```
 
 Get SKP from SIASN
@@ -1404,7 +1509,10 @@ $pathParams = [
     'idRiwayatSkp' => 'string',
 ];
 
-Skp::getId($pathParams);
+Skp::get($pathParams);
+
+// Or directly
+Skp::get('{idRiwayatSkp}');
 ```
 
 Add SKP to SIASN
@@ -1447,7 +1555,7 @@ $queryParams = [
   'tahun' => 0,
 ];
 
-Skp::postSave([], $queryParams);
+Skp::save([], $queryParams);
 ```
 </details>
 
@@ -1463,7 +1571,10 @@ $pathParams = [
     'idRiwayatSkp' => 'string',
 ];
 
-Skp22::getId($pathParams);
+Skp22::get($pathParams);
+
+// Or directly
+Skp22::get('{idRiwayatSkp}');
 ```
 
 Add SKP 2022 to SIASN
@@ -1495,7 +1606,7 @@ $queryParams = [
   'tahun' => 0,
 ];
 
-Skp22::postSave([], $queryParams);
+Skp22::save([], $queryParams);
 ```
 </details>
 

@@ -41,7 +41,7 @@ class PostJabatanUnorjabatanSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Jabatan::postUnorSave([], $query)->object(),
+            Jabatan::saveUnor([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

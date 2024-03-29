@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Cpns
 {
-    public static function postSave(array $paths = [], array $query = []): Response
+    public static function save(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/cpns/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

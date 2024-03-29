@@ -34,7 +34,7 @@ class DeleteAngkakreditDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            AngkaKredit::deleteId($paths)->object(),
+            AngkaKredit::delete($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

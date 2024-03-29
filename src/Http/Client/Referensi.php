@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Referensi
 {
-    public static function getRefUnor(array $paths = [], array $query = []): Response
+    public static function getUnor(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/referensi/ref-unor';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

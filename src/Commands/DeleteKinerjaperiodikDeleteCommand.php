@@ -34,7 +34,7 @@ class DeleteKinerjaperiodikDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Kinerja::deleteId($paths)->object(),
+            Kinerja::delete($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

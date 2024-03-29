@@ -34,7 +34,7 @@ class GetSkpIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Skp::getId($paths)->object(),
+            Skp::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

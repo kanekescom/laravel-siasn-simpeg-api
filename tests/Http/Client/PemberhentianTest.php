@@ -13,7 +13,7 @@ it('can get pns list pensiun instansi', function () {
         'tglAwal' => $tglAwal,
         'tglAkhir' => $tglAkhir,
     ];
-    $response = Pemberhentian::getListPensiunInstansi([], $query);
+    $response = Pemberhentian::getPensiunList([], $query);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

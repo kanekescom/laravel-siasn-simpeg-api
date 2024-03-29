@@ -41,7 +41,7 @@ class PostPenghargaanSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Penghargaan::postSave([], $query)->object(),
+            Penghargaan::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

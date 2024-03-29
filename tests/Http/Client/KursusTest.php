@@ -10,7 +10,21 @@ it('can get kursus id', function () {
     $paths = [
         'idRiwayatKursus' => $id,
     ];
-    $response = Kursus::getId($paths);
+    $response = Kursus::get($paths);
+    $result = $response->collect()->toArray();
+
+    expect($response->successful())->toBeTrue();
+    expect($result)->toMatchArray([
+        'code' => '1',
+    ]);
+});
+
+it('can get kursus id directly', function () {
+    $id = config('siasn-simpeg-api.params_test.get_kursus_id');
+
+    expect($id)->not->toBeEmpty();
+
+    $response = Kursus::get($id);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

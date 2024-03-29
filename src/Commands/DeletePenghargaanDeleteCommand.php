@@ -34,7 +34,7 @@ class DeletePenghargaanDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Penghargaan::deleteId($paths)->object(),
+            Penghargaan::delete($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

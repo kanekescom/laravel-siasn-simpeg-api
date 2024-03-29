@@ -41,7 +41,7 @@ class PostPnsDataUtamaUpdateCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Pns::postDataUtamaUpdate([], $query)->object(),
+            Pns::updateDataUtama([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

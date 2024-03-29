@@ -34,7 +34,7 @@ class DeleteKursusDeleteCommand extends Command
         ];
 
         $this->info(json_encode(
-            Kursus::deleteId($paths)->object(),
+            Kursus::delete($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

@@ -28,7 +28,7 @@ class GetReferensiRefUnorCommand extends Command
     {
         $start = now();
         $this->info(json_encode(
-            Referensi::getRefUnor()->object(),
+            Referensi::getUnor()->object(),
             JSON_PRETTY_PRINT
         ));
 

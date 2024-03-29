@@ -34,7 +34,7 @@ class GetJabatanIdCommand extends Command
         ];
 
         $this->info(json_encode(
-            Jabatan::getId($paths)->object(),
+            Jabatan::get($paths)->object(),
             JSON_PRETTY_PRINT
         ));
 

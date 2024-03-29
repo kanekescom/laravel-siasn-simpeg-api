@@ -41,7 +41,7 @@ class PostSkpSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Skp::postSave([], $query)->object(),
+            Skp::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

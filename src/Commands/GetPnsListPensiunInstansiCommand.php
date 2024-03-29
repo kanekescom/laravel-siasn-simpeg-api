@@ -37,7 +37,7 @@ class GetPnsListPensiunInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Pemberhentian::getListPensiunInstansi([], $query)->object(),
+            Pemberhentian::getPensiunList([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 
