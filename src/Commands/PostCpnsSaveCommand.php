@@ -41,7 +41,7 @@ class PostCpnsSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Cpns::postSave([], $query)->object(),
+            Cpns::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

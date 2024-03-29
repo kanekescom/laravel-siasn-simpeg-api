@@ -8,16 +8,28 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Kursus
 {
-    public static function delete(array $paths = [], array $query = []): Response
+    public static function delete(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'idRiwayatKursus' => $paths,
+            ];
+        }
+
         $urlFormat = '/kursus/delete/{idRiwayatKursus}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
         return (new Simpeg)->delete($urlParsed, $query);
     }
 
-    public static function get(array $paths = [], array $query = []): Response
+    public static function get(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'idRiwayatKursus' => $paths,
+            ];
+        }
+
         $urlFormat = '/kursus/id/{idRiwayatKursus}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 

@@ -41,7 +41,7 @@ class PostKinerjaperiodikSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Kinerja::postSave([], $query)->object(),
+            Kinerja::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

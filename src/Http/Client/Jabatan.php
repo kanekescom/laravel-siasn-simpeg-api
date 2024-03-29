@@ -8,16 +8,28 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Jabatan
 {
-    public static function get(array $paths = [], array $query = []): Response
+    public static function get(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'idRiwayatJabatan' => $paths,
+            ];
+        }
+
         $urlFormat = '/jabatan/id/{idRiwayatJabatan}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function getNipBaru(array $paths = [], array $query = []): Response
+    public static function getNipBaru(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'nipBaru' => $paths,
+            ];
+        }
+
         $urlFormat = '/jabatan/pns/{nipBaru}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 

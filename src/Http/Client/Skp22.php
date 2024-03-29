@@ -8,8 +8,14 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Skp22
 {
-    public static function get(array $paths = [], array $query = []): Response
+    public static function get(array|string $paths = [], array $query = []): Response
     {
+        if (is_string($paths)) {
+            $paths = [
+                'idRiwayatSkp' => $paths,
+            ];
+        }
+
         $urlFormat = '/skp22/id/{idRiwayatSkp}';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
 

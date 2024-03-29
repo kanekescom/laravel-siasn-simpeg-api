@@ -41,7 +41,7 @@ class PostAngkakreditSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            AngkaKredit::postSave([], $query)->object(),
+            AngkaKredit::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

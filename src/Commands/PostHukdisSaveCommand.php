@@ -41,7 +41,7 @@ class PostHukdisSaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Hukdis::postSave([], $query)->object(),
+            Hukdis::save([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 
