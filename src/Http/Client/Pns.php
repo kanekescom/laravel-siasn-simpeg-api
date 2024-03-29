@@ -33,7 +33,7 @@ class Pns
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function postDataUtamaUpdate(array $paths = [], array $query = []): Response
+    public static function updateDataUtama(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pns/data-utama-update';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

@@ -1025,7 +1025,7 @@ $queryParams = [
   'taspen_nomor' => 'string',
 ];
 
-Pns::postDataUtamaUpdate([], $queryParams);
+Pns::updateDataUtama([], $queryParams);
 ```
 
 Get PNS Data Utama from SIASN
