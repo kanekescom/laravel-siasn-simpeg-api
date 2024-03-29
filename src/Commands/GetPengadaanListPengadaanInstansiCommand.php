@@ -34,7 +34,7 @@ class GetPengadaanListPengadaanInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Pengadaan::getListInstansi([], $query)->object(),
+            Pengadaan::getList([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

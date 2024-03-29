@@ -10,7 +10,7 @@ it('can get pengadaan list pengadaan instansi', function () {
     $query = [
         'tahun' => $tahun,
     ];
-    $response = Pengadaan::getListInstansi([], $query);
+    $response = Pengadaan::getList([], $query);
     $result = $response->collect()->toArray();
 
     expect($response->successful())->toBeTrue();

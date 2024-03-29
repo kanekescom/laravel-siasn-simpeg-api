@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Pemberhentian
 {
-    public static function getListPensiunInstansi(array $paths = [], array $query = []): Response
+    public static function getPensiunList(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pns/list-pensiun-instansi';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

@@ -902,7 +902,7 @@ $pathParams = [
     'tahun' => 'string',
 ];
 
-Pengadaan::getListInstansi($pathParams);
+Pengadaan::getList($pathParams);
 ```
 </details>
 
@@ -1078,7 +1078,7 @@ $pathParams = [
     'periode' => 'string',
 ];
 
-Kp::getListInstansi($pathParams);
+Kp::getList($pathParams);
 ```
 
 Upload Dok SK file to SIASN
@@ -1110,7 +1110,7 @@ $pathParams = [
     'tglAkhir' => 'string',
 ];
 
-Pemberhentian::getListPensiunInstansi($pathParams);
+Pemberhentian::getPensiunList($pathParams);
 ```
 </details>
 

@@ -34,7 +34,7 @@ class GetPnsListKpInstansiCommand extends Command
         ];
 
         $this->info(json_encode(
-            Kp::getListInstansi([], $query)->object(),
+            Kp::getList([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

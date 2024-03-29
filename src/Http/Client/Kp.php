@@ -8,7 +8,7 @@ use Kanekescom\Siasn\Simpeg\Api\Simpeg;
 
 class Kp
 {
-    public static function getListInstansi(array $paths = [], array $query = []): Response
+    public static function getList(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/pns/list-kp-instansi';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
