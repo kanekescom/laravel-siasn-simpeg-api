@@ -24,7 +24,7 @@ class Jabatan
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function postUnorSave(array $paths = [], array $query = []): Response
+    public static function saveUnor(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/unorjabatan/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
@@ -32,7 +32,7 @@ class Jabatan
         return (new Simpeg)->post($urlParsed, $query);
     }
 
-    public static function postSave(array $paths = [], array $query = []): Response
+    public static function save(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/jabatan/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

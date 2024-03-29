@@ -737,7 +737,7 @@ $queryParams = [
   'unorId' => 'string',
 ];
 
-Jabatan::postUnorSave([], $queryParams);
+Jabatan::saveUnor([], $queryParams);
 ```
 
 Add Jabatan to SIASN
@@ -1392,7 +1392,7 @@ $queryParams = [
   'tahun' => 0,
 ];
 
-Skp::post2021Save([], $queryParams);
+Skp::save2021([], $queryParams);
 ```
 
 Get SKP from SIASN

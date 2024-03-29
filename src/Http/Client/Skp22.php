@@ -16,7 +16,7 @@ class Skp22
         return (new Simpeg)->get($urlParsed, $query);
     }
 
-    public static function postSave(array $paths = [], array $query = []): Response
+    public static function save(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/skp22/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);

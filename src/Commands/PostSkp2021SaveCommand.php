@@ -41,7 +41,7 @@ class PostSkp2021SaveCommand extends Command
         $start = now();
 
         $this->info(json_encode(
-            Skp::post2021Save([], $query)->object(),
+            Skp::save2021([], $query)->object(),
             JSON_PRETTY_PRINT
         ));
 

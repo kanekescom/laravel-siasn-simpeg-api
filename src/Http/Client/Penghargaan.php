@@ -24,7 +24,7 @@ class Penghargaan
         return (new Simpeg)->delete($urlParsed, $query);
     }
 
-    public static function postSave(array $paths = [], array $query = []): Response
+    public static function save(array $paths = [], array $query = []): Response
     {
         $urlFormat = '/penghargaan/save';
         $urlParsed = (new UrlParser($urlFormat))->parse($paths);
