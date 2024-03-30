@@ -191,7 +191,7 @@ php artisan siasn-simpeg:post-kursus-save
 
 Send GET request to /pengadaan/list-pengadaan-instansi endpoint
 ```bash
-php artisan siasn-simpeg:get-pengadaan-list-pengadaan-instansi {Tahun}
+php artisan siasn-simpeg:get-pengadaan-list-pengadaan-instansi {tahun}
 ```
 </details>
 
@@ -258,8 +258,10 @@ php artisan siasn-simpeg:download-pns-photo {idPns}
 
 Send GET request to /pns/list-kp-instansi endpoint
 ```bash
-php artisan siasn-simpeg:get-pns-list-kp-instansi s{periode}
+php artisan siasn-simpeg:get-pns-list-kp-instansi {periode}
 ```
+
+**periode** format is yyyy-mm-dd
 
 Send POST request to /upload-dok-sk-kp endpoint
 ```bash
@@ -274,6 +276,9 @@ Send GET request to /pns/list-pensiun-instansi endpoint
 ```bash
 php artisan siasn-simpeg:get-pns-list-pensiun-instansi {tglAwal} {tglAkhir}
 ```
+
+**tglAwal** format is dd-mm-yyyy
+**tglAkhir** format is dd-mm-yyyy
 </details>
 
 <details>
