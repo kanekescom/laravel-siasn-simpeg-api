@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp22;
+use Kanekescom\Siasn\Simpeg\Api\Skp22;
 
 class GetSkp22IdCommand extends Command
 {

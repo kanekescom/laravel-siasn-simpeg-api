@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\AngkaKredit;
+use Kanekescom\Siasn\Simpeg\Api\AngkaKredit;
 
 class GetAngkakreditIdCommand extends Command
 {

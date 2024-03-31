@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Skp22;
+use Kanekescom\Siasn\Simpeg\Api\Skp22;
 
 class PostSkp22SaveCommand extends Command
 {
