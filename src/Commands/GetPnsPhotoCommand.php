@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Pns;
+use Kanekescom\Siasn\Simpeg\Api\Pns;
 
 class GetPnsPhotoCommand extends Command
 {

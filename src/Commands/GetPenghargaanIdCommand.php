@@ -3,7 +3,7 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Penghargaan;
+use Kanekescom\Siasn\Simpeg\Api\Penghargaan;
 
 class GetPenghargaanIdCommand extends Command
 {

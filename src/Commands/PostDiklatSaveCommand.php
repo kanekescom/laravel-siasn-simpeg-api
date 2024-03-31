@@ -3,8 +3,8 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
+use Kanekescom\Siasn\Simpeg\Api\Diklat;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Diklat;
 
 class PostDiklatSaveCommand extends Command
 {

@@ -3,8 +3,8 @@
 namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
+use Kanekescom\Siasn\Simpeg\Api\Cpns;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Cpns;
 
 class PostCpnsSaveCommand extends Command
 {

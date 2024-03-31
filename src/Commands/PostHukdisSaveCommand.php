@@ -4,7 +4,7 @@ namespace Kanekescom\Siasn\Simpeg\Api\Commands;
 
 use Illuminate\Console\Command;
 use Kanekescom\Siasn\Simpeg\Api\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Simpeg\Api\Http\Client\Hukdis;
+use Kanekescom\Siasn\Simpeg\Api\Hukdis;
 
 class PostHukdisSaveCommand extends Command
 {
