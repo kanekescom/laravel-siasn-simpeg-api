@@ -5,5 +5,6 @@ it('can get skp22 id', function () {
 
     expect($id)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-skp22-id {$id}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-skp22-id {$id}")
+        ->assertSuccessful();
 });

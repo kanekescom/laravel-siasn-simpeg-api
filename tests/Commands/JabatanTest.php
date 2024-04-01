@@ -5,7 +5,8 @@ it('can get jabatan id', function () {
 
     expect($id)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-jabatan-id {$id}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-jabatan-id {$id}")
+        ->assertSuccessful();
 });
 
 it('can get jabatan nipbaru', function () {
@@ -13,5 +14,6 @@ it('can get jabatan nipbaru', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-jabatan-pns {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-jabatan-pns {$nipBaru}")
+        ->assertSuccessful();
 });

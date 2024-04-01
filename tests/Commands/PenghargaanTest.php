@@ -5,5 +5,6 @@ it('can get penghargaan id', function () {
 
     expect($id)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-penghargaan-id {$id}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-penghargaan-id {$id}")
+        ->assertSuccessful();
 });

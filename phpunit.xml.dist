@@ -90,7 +90,7 @@
         <!-- KP -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_KP_INSTANSI_PERIODE" value=""/>
 
-        <!-- Pemberhetntian -->
+        <!-- Pemberhentian -->
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_PENSIUN_INSTANSI_TGLAWAL" value=""/>
         <env name="SIASN_PARAMS_TEST_GET_PNS_LIST_PENSIUN_INSTANSI_TGLAKHIR" value=""/>
 

@@ -5,7 +5,8 @@ it('can get pns data anak', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-data-anak {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-data-anak {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get pns data ortu', function () {
@@ -13,7 +14,8 @@ it('can get pns data ortu', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-data-ortu {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-data-ortu {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get pns data pasangan', function () {
@@ -21,7 +23,8 @@ it('can get pns data pasangan', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-data-pasangan {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-data-pasangan {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get pns data utama', function () {
@@ -29,7 +32,8 @@ it('can get pns data utama', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-data-utama {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-data-utama {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get pns photo', function () {
@@ -37,7 +41,8 @@ it('can get pns photo', function () {
 
     expect($idPns)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-photo {$idPns}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-photo {$idPns}")
+        ->assertSuccessful();
 });
 
 it('can download pns photo', function () {
@@ -45,5 +50,6 @@ it('can download pns photo', function () {
 
     expect($idPns)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:download-pns-photo {$idPns}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:download-pns-photo {$idPns}")
+        ->assertSuccessful();
 });

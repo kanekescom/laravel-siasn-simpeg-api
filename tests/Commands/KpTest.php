@@ -5,5 +5,6 @@ it('can get pns list kp instansi', function () {
 
     expect($periode)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-list-kp-instansi {$periode}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-list-kp-instansi {$periode}")
+        ->assertSuccessful();
 });
