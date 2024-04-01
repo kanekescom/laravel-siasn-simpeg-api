@@ -204,7 +204,7 @@ class Riwayat
         return Simpeg::get($urlParsed, $query);
     }
 
-    public static function getPnsunor(array|string $paths = [], array $query = []): Response
+    public static function getUnor(array|string $paths = [], array $query = []): Response
     {
         if (is_string($paths)) {
             $paths = [
