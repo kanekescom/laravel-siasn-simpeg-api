@@ -7,5 +7,6 @@ it('can get pns list pensiun instansi', function () {
     expect($tglAwal)->not->toBeEmpty();
     expect($tglAkhir)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-list-pensiun-instansi {$tglAwal} {$tglAkhir}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-list-pensiun-instansi {$tglAwal} {$tglAkhir}")
+        ->assertSuccessful();
 });

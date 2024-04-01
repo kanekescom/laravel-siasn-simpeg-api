@@ -5,5 +5,6 @@ it('can get angkakredit id', function () {
 
     expect($id)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-angkakredit-id {$id}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-angkakredit-id {$id}")
+        ->assertSuccessful();
 });

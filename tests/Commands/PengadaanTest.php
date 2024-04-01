@@ -5,5 +5,6 @@ it('can get pengadaan list pengadaan instansi', function () {
 
     expect($tahun)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pengadaan-list-pengadaan-instansi {$tahun}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pengadaan-list-pengadaan-instansi {$tahun}")
+        ->assertSuccessful();
 });

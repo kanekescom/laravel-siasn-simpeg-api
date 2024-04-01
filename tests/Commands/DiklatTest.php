@@ -5,5 +5,6 @@ it('can get diklat id', function () {
 
     expect($id)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-diklat-id {$id}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-diklat-id {$id}")
+        ->assertSuccessful();
 });

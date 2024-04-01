@@ -17,7 +17,7 @@ class Upload
         return Simpeg::get($urlParsed, $query);
     }
 
-    public static function downloadDok(array $paths = [], array $query = [], string $disk = 'local', ?string $filename = null): string
+    public static function downloadDok(array $paths = [], array $query = [], string $disk = 'local', string $filename = null): string
     {
         $filePath = $query['filePath'];
         $filename = $filename ?? "siasn-simpeg/{$filePath}";

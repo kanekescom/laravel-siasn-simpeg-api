@@ -5,7 +5,8 @@ it('can get rw angkakredit', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-angkakredit {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-angkakredit {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw cltn', function () {
@@ -13,7 +14,8 @@ it('can get rw cltn', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-cltn {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-cltn {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw diklat', function () {
@@ -21,7 +23,8 @@ it('can get rw diklat', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-diklat {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-diklat {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw dp3', function () {
@@ -29,7 +32,8 @@ it('can get rw dp3', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-dp3 {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-dp3 {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw golongan', function () {
@@ -37,7 +41,8 @@ it('can get rw golongan', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-golongan {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-golongan {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw hukdis', function () {
@@ -45,7 +50,8 @@ it('can get rw hukdis', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-hukdis {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-hukdis {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw jabatan', function () {
@@ -53,7 +59,8 @@ it('can get rw jabatan', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-jabatan {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-jabatan {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw kinerjaperiodik', function () {
@@ -61,7 +68,8 @@ it('can get rw kinerjaperiodik', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-kinerjaperiodik {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-kinerjaperiodik {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw kursus', function () {
@@ -69,7 +77,8 @@ it('can get rw kursus', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-kursus {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-kursus {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw masakerja', function () {
@@ -77,7 +86,8 @@ it('can get rw masakerja', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-masakerja {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-masakerja {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw pemberhentian', function () {
@@ -85,7 +95,8 @@ it('can get rw pemberhentian', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-pemberhentian {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-pemberhentian {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw pendidikan', function () {
@@ -93,7 +104,8 @@ it('can get rw pendidikan', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-pendidikan {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-pendidikan {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw penghargaan', function () {
@@ -101,7 +113,8 @@ it('can get rw penghargaan', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-penghargaan {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-penghargaan {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw pindahinstansi', function () {
@@ -109,7 +122,8 @@ it('can get rw pindahinstansi', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-pindahinstansi {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-pindahinstansi {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw pnsunor', function () {
@@ -117,7 +131,8 @@ it('can get rw pnsunor', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-pnsunor {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-pnsunor {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw pwk', function () {
@@ -125,7 +140,8 @@ it('can get rw pwk', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-pwk {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-pwk {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw skp', function () {
@@ -133,7 +149,8 @@ it('can get rw skp', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-skp {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-skp {$nipBaru}")
+        ->assertSuccessful();
 });
 
 it('can get rw skp22', function () {
@@ -141,5 +158,6 @@ it('can get rw skp22', function () {
 
     expect($nipBaru)->not->toBeEmpty();
 
-    $this->artisan("siasn-simpeg:get-pns-rw-skp22 {$nipBaru}")->assertSuccessful();
+    $this->artisan("siasn-simpeg:get-pns-rw-skp22 {$nipBaru}")
+        ->assertSuccessful();
 });
